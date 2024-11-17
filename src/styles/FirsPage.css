@@ -1,0 +1,102 @@
+.screen-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.screen-border {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 10px solid;
+    border-image: linear-gradient(90deg, #D4FF01, #8CA802) 1;
+    /*border-radius: 20px;*/
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.logo {
+    display: block;
+    margin: 5% auto 0 auto; /* Центровка по горизонтали */
+    width: 70%; /* Высота логотипа */
+    height: auto; /* Сохраняем пропорции */
+}
+
+.text-block {
+    position: absolute;
+    top: 22%; /* Отступ от верхнего края экрана */
+    width: 100%;
+    left: 0;
+    font-family: Bowler, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+.text-line {
+    font-size: 16px; /* Размер текста, измените при необходимости */
+    margin: 0; /* Отступы между строками */
+    color: white;
+}
+
+.text-line:first-child {
+    font-weight: bold; /* Сделать первую строку жирной */
+    font-size: 22px; /* Сделать первую строку больше */
+    color: #D4FF00;
+}
+
+.icons {
+    position: absolute;
+    right: 6%; /* Отступ от правого края рамки */
+    bottom: 5%; /* Отступ от нижнего края рамки */
+    height: 34%;
+    width: auto;
+    z-index: 0;
+}
+
+.down {
+    position: absolute;
+    left: 15%;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: auto;
+}
+
+.white-bars {
+    position: absolute;
+    right: 0; /* Выравниваем полоски вправо */
+    top: 46%;
+    transform: translateY(-50%); /* Центровка по вертикали */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px; /* Отступы между полосками */
+    z-index: 10;
+}
+
+.bar {
+    width: 50vw;
+    height: 6%;
+    background: #FFFFFF;
+    color: #000;
+    font-family: Bowler, sans-serif;
+    font-size: 20px;
+    padding-top: 4px;
+    text-align: left;
+    font-weight: 400;
+    padding-left: 40px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);
+    align-items: center;
+}
+
+.bar:nth-child(2) {
+    width: 42vw; /* Уменьшенная ширина для второй полоски */
+}
+
+.bar:nth-child(3) {
+    width: 34vw; /* Уменьшенная ширина для третьей полоски */
+}

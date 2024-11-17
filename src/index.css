@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Intro Book';
+    src: url('../src/fonts/Intro-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bowler';
+    src: url('../src/fonts/ofont.ru_Bowler.ttf') format('truetype')
+}
+
+html {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+body {
+    width: 100%;
+    height: var(--tg-viewport-height, 100%);
+    overflow: hidden;
+    margin: 0;
+    background: black;
+}
