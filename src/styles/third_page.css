@@ -1,0 +1,252 @@
+/* Общие стили для всех устройств */
+.screen-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.white-text-container {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание (если требуется) */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);
+}
+
+.white-text {
+    font-family: Bowler, sans-serif;
+    font-size: 25px;
+    color: black;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.white-text:first-child {
+    padding-top: 5px;
+}
+
+.third-icons {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    height: 15%;
+    width: auto;
+    z-index: 0;
+}
+
+.features-container {
+    position: absolute;
+    top: 40%;
+    display: flex;
+    flex-direction: column; /* Расположить элементы по вертикали */
+    align-items: flex-start; /* Центрировать по горизонтали */
+    justify-content: center; /* Центрировать по вертикали */
+    gap: 10px; /* Расстояние между элементами */
+}
+
+.feature-item {
+    display: flex;
+    align-items: center; /* Выравнивание иконки и текста по вертикали */
+    gap: 10px; /* Расстояние между иконкой и текстом */
+}
+
+.feature-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.feature-percent-icon {
+    width: 40px;
+    height: 35px;
+}
+
+.feature-text {
+    font-family: Intro Book, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-align: left; /* Текст выравнивается слева */
+    white-space: normal; /* Разрешить перенос и использование пробелов */
+    word-spacing: normal; /* Сохраняет нормальные промежутки между словами */
+    letter-spacing: normal; /* Убирает нежелательное сжатие букв */
+    flex-wrap: nowrap; /* По умолчанию текст не переносится */
+    gap: 5px; /* Расстояние между словами, чтобы они не слипались */
+    display: flex; /* Используем flexbox для управления элементами */
+    flex-direction: column; /* Каждый элемент в новой строке */
+}
+
+.feature-line {
+    display: block; /* Каждая строка текста на отдельной строке */
+}
+
+.third-button {
+    box-sizing: border-box;
+    position: absolute;
+    top: 80%;
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 10px;
+    isolation: isolate;
+
+    /* Размеры кнопки */
+    width: 73%;
+    height: 10%;
+
+    /* Фон и границы */
+    background: linear-gradient(90deg, #B4D608 0%, #CEF506 100%);
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    /* Вспомогательные свойства для родительского контейнера */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    /* Стили текста внутри кнопки */
+    font-family: Bowler, sans-serif; /* Подберите шрифт */
+    font-size: 18px; /* Настройте размер текста */
+    line-height: 20px; /* Настройте высоту строки */
+    text-align: center;
+    color: #000000; /* Цвет текста */
+    cursor: pointer; /* Указатель мыши */
+    transition: all 0.3s ease; /* Для плавности анимации */
+}
+
+/* Hover эффект */
+.third-button:hover {
+    background: linear-gradient(90deg, #CEF506 0%, #B4D608 100%);
+    transform: scale(1.05); /* Увеличение на 5% при наведении */
+}
+
+/* Active эффект */
+.third-button:active {
+    transform: scale(0.95); /* Уменьшение на 5% при клике */
+    background: linear-gradient(90deg, #A5C607 0%, #B9E506 100%);
+}
+
+/* Стили для смартфонов */
+@media (max-width: 650px) {
+    .third-icons {
+        top: 29%;
+        height: 15%;
+    }
+
+    .third-button {
+        width: 73%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 18px;
+    }
+
+    .feature-text {
+        flex-wrap: wrap; /* Разрешает перенос строк на мобильных устройствах */
+        text-align: left; /* Текст выравнивается по левому краю */
+        gap: 0; /* Добавляем пробел между словами */
+    }
+
+    .feature-line {
+        display: block; /* Разделение строк только на мобильных устройствах */
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+    .third-icons {
+        top: 30%;
+        height: 15%;
+    }
+
+    .third-button {
+        top: 80%;
+        width: 42%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .features-container {
+        gap: 20px;
+    }
+
+    .feature-text {
+        flex-direction: row; /* На больших экранах элементы в одну строку */
+        gap: 5px; /* Добавляем пробел между словами */
+        font-size: 20px;
+    }
+
+    .feature-line {
+        display: inline; /* Объединяем строки в одну строку */
+    }
+}
+
+/* Для компьютеров (ширина больше 1024px) */
+@media (min-width: 1025px) {
+    .third-icons {
+        position: absolute;
+        top: 50%;
+        right: 20%;
+        transform: translateY(-50%);
+        height: 30%;
+        width: auto;
+    }
+
+    .third-button {
+        width: 73%;
+        font-size: 20px;
+        max-width: 320px;
+        height: 70px;
+        top: 80%;
+    }
+
+    .white-text-container {
+        height: 80px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        white-space: nowrap; /* Запрещает перенос текста */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
+        background: white;
+    }
+
+    .white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 30px;
+        padding: 0 20px 0 0;
+    }
+
+    .white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 30px;
+        padding: 0 20px 0 40px;
+    }
+
+    .features-container {
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        gap: 20px;
+    }
+
+    .feature-text {
+        flex-direction: row; /* На больших экранах элементы в одну строку */
+        gap: 5px; /* Добавляем пробел между словами */
+        font-size: 25px;
+    }
+
+    .feature-line {
+        display: inline; /* Объединяем строки в одну строку */
+    }
+}

@@ -1,0 +1,337 @@
+/* Общие стили для всех устройств */
+.screen-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.logo {
+    position: absolute;
+    /*align-self: start;*/
+    top: 20px;
+    margin: 0 auto 0 auto; /* Центровка по горизонтали */
+    /*width: 52%;
+    height: auto;*/
+    width: auto;
+    height: 10%;
+}
+
+.text-block {
+    position: absolute;
+    top: 20%; /* Отступ от верхнего края экрана */
+    width: 100%;
+    left: 0;
+    font-family: Bowler, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    line-height: 16px;
+}
+
+.text-line {
+    font-size: 14px; /* Размер текста, измените при необходимости */
+    margin: 0; /* Отступы между строками */
+    color: white;
+}
+
+.text-line:first-child {
+    font-weight: bold; /* Сделать первую строку жирной */
+    font-size: 18px; /* Сделать первую строку больше */
+    color: #D4FF00;
+}
+
+.icons {
+    position: absolute;
+    /*right: 6%;
+    bottom: 5%;*/
+    right: 0;
+    top: 42%;
+    transform: translateY(-50%);
+    /*height: auto;
+    width: 46%;*/
+    height: 25%;
+    width: auto;
+    z-index: 0;
+}
+
+.video {
+    position: absolute;
+    top: 58%;
+    height: 25%;
+    width: auto;
+    border: 1px solid #D4FF00;
+    border-radius: 10px;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0); /* Начальная позиция */
+    }
+    50% {
+        transform: translateY(-15px); /* Иконка поднимается вверх */
+    }
+    100% {
+        transform: translateY(0); /* Возвращается на место */
+    }
+}
+
+.down {
+    position: absolute;
+    left: 15%;
+    top: 90%;
+    transform: translateY(-50%);
+    width: 51px;
+    height: auto;
+    animation: jump 1s ease-in-out infinite;
+}
+
+.white-bars {
+    position: absolute;
+    left: 0; /* Выравниваем полоски вправо */
+    top: 42%;
+    transform: translateY(-50%); /* Центровка по вертикали */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px; /* Отступы между полосками */
+    z-index: 10;
+}
+
+.bar {
+    width: 50vw;
+    background: #FFFFFF;
+    color: #000;
+    font-family: Bowler, sans-serif;
+    font-size: 20px;
+    padding-top: 4px;
+    line-height: 30px;
+    text-align: left;
+    font-weight: 400;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);*/
+    clip-path: polygon(0 0, 100% 0, 100% 0, calc(100% - 25px) 100%, 0 100%);
+    align-items: center;
+}
+
+.bar:nth-child(2) {
+    width: 42vw; /* Уменьшенная ширина для второй полоски */
+}
+
+.bar:nth-child(3) {
+    width: 34vw; /* Уменьшенная ширина для третьей полоски */
+}
+
+/* Стили для смартфонов */
+@media (max-width: 650px) {
+    .logo {
+        top: 20px;
+        width: auto;
+        height: 10%;
+    }
+
+    .text-block {
+        top: 20%;
+        line-height: 18px;
+    }
+
+    .text-line {
+        font-size: 14px;
+    }
+
+    .text-line:first-child {
+        font-size: 18px;
+    }
+
+    .icons {
+        top: 42%;
+        height: 25%;
+        width: auto;
+        right: 1%;
+    }
+
+    .video {
+        top: 58%;
+        height: 25%;
+        width: auto;
+    }
+
+    .down {
+        left: 15%;
+        top: 90%;
+        width: 51px;
+        height: auto;
+    }
+
+    .white-bars {
+        top: 42%;
+        gap: 12px;
+    }
+
+    .bar {
+        width: 50vw;
+        font-size: 20px;
+        padding-top: 4px;
+        line-height: 30px;
+        text-align: left;
+        font-weight: 400;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .bar:nth-child(2) {
+        width: 42vw;
+    }
+
+    .bar:nth-child(3) {
+        width: 34vw;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+    /*.logo {
+        top: 20px;
+        width: auto;
+        height: 12%;
+    }
+
+    .text-block {
+        top: 20%;
+        line-height: 18px;
+    }*/
+
+    .logo {
+        top: 70px;
+        width: auto;
+        height: 10%;
+    }
+
+    .text-block {
+        top: 35%;
+        line-height: 16px;
+    }
+
+    .text-line:first-child {
+        font-size: 20px;
+    }
+
+    .text-line {
+        margin-top: 8px;
+        font-size: 16px;
+    }
+
+    .icons {
+        top: 42%;
+        height: 35%;
+        width: auto;
+        right: 1%;
+    }
+
+    .video {
+        top: 60%;
+        height: 30%;
+        width: auto;
+    }
+
+    .down {
+        left: 10%;
+        top: 70%;
+        width: 51px;
+        height: auto;
+    }
+
+    .white-bars {
+        top: 42%;
+        gap: 12px;
+    }
+
+    .bar {
+        width: 35vw;
+        font-size: 20px;
+        padding-top: 4px;
+        line-height: 30px;
+        text-align: left;
+        font-weight: 400;
+        padding-left: 40px;
+        box-sizing: border-box;
+    }
+
+    .bar:nth-child(2) {
+        width: 30vw;
+    }
+
+    .bar:nth-child(3) {
+        width: 25vw;
+    }
+}
+
+/* Для компьютеров (ширина больше 1024px) */
+@media (min-width: 1025px) {
+    .logo {
+        top: 70px;
+        width: auto;
+        height: 10%;
+    }
+
+    .text-block {
+        top: 35%;
+        line-height: 16px;
+    }
+
+    .text-line:first-child {
+        font-size: 20px;
+    }
+
+    .text-line {
+        margin-top: 8px;
+        font-size: 16px;
+    }
+
+    .icons {
+        top: 45%;
+        height: 40%;
+        width: auto;
+        right: 1%;
+    }
+
+    .video {
+        top: 50%;
+        height: 40%;
+        width: auto;
+    }
+
+    .down {
+        left: 10%;
+        top: 80%;
+        width: 51px;
+        height: auto;
+    }
+
+    .white-bars {
+        top: 45%;
+        gap: 12px;
+    }
+
+    .bar {
+        width: 30vw;
+        font-size: 25px;
+        padding-top: 4px;
+        line-height: 30px;
+        text-align: left;
+        font-weight: 400;
+        padding-left: 70px;
+        box-sizing: border-box;
+    }
+
+    .bar:nth-child(2) {
+        width: 27vw;
+    }
+
+    .bar:nth-child(3) {
+        width: 24vw;
+    }
+}

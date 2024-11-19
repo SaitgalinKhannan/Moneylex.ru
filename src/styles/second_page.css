@@ -1,0 +1,231 @@
+/* Общие стили для всех устройств */
+.screen-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.tilted-text-container {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    display: inline-block;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание (если требуется) */
+    overflow: hidden;
+    transform: rotate(-10deg); /* Угол наклона */
+    box-shadow: -200px 0 #FFFFFF, /* Левый нижний угол */ 200px 0 #FFFFFF; /* Правый верхний угол */
+}
+
+.tilted-text {
+    font-family: Bowler, sans-serif;
+    font-size: 25px; /* Размер текста */
+    color: black; /* Цвет текста */
+    background: #FFFFFF;
+    padding: 10px 0 5px 0; /* Отступы внутри блока */
+    overflow: hidden;
+    width: 100%;
+    display: flex; /* Flexbox для выравнивания */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center;
+}
+
+
+.second-text-block {
+    position: absolute;
+    top: 30%; /* Отступ от верхнего края экрана */
+    left: 0;
+    font-family: Bowler, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    line-height: 16px;
+}
+
+.second-text-line {
+    font-size: 14px; /* Размер текста, измените при необходимости */
+    margin: 0; /* Отступы между строками */
+    color: white;
+}
+
+.second-text-line:first-child {
+    font-weight: bold; /* Сделать первую строку жирной */
+    font-size: 18px; /* Сделать первую строку больше */
+    color: #D4FF00;
+}
+
+.second-icons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18%;
+    width: auto;
+    z-index: 0;
+}
+
+.second-button {
+    box-sizing: border-box;
+    position: absolute;
+    top: 80%;
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 10px;
+    isolation: isolate;
+
+    /* Размеры кнопки */
+    width: 73%;
+    height: 10%;
+
+    /* Фон и границы */
+    background: linear-gradient(90deg, #B4D608 0%, #CEF506 100%);
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    /* Вспомогательные свойства для родительского контейнера */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    /* Стили текста внутри кнопки */
+    font-family: Bowler, sans-serif; /* Подберите шрифт */
+    font-size: 16px; /* Настройте размер текста */
+    line-height: 20px; /* Настройте высоту строки */
+    text-align: center;
+    color: #000000; /* Цвет текста */
+    cursor: pointer; /* Указатель мыши */
+    transition: all 0.3s ease; /* Для плавности анимации */
+}
+
+/* Hover эффект */
+.second-button:hover {
+    background: linear-gradient(90deg, #CEF506 0%, #B4D608 100%);
+    transform: scale(1.05); /* Увеличение на 5% при наведении */
+}
+
+/* Active эффект */
+.second-button:active {
+    transform: scale(0.95); /* Уменьшение на 5% при клике */
+    background: linear-gradient(90deg, #A5C607 0%, #B9E506 100%);
+}
+
+/* Стили для смартфонов */
+@media (max-width: 650px) {
+    .second-text-block {
+        top: 30%;
+        line-height: 16px;
+        width: 100%;
+    }
+
+    .second-text-line:first-child {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .second-text-line {
+        font-size: 18px;
+    }
+
+    .second-icons {
+        top: 55%;
+        height: 18%;
+        width: auto;
+    }
+
+    .second-button {
+        width: 73%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+    .second-text-block {
+        top: 30%;
+        line-height: 20px;
+        width: 100%;
+    }
+
+    .second-text-line:first-child {
+        line-height: 20px;
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .second-text-line {
+        font-size: 20px;
+    }
+
+    .second-icons {
+        top: 58%;
+        height: 25%;
+        width: auto;
+    }
+
+    .second-button {
+        top: 80%;
+        width: 42%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 20px;
+    }
+}
+
+/* Для компьютеров (ширина больше 1024px) */
+@media (min-width: 1025px) {
+    .second-text-block {
+        top: 50%;
+        line-height: 25px;
+        transform: translateY(-50%); /* Смещение, чтобы центр совпал с заданным положением */
+        right: 15%; /* Расположение блока справа с отступом */
+        text-align: right; /* Выравнивание текста по правому краю */
+    }
+
+    .second-text-line:first-child {
+        line-height: 25px;
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    .second-text-line {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .second-icons {
+        top: 50%; /* Центрирование по вертикали */
+        left: 25%; /* Центрирование на левой половине экрана */
+        transform: translate(-50%, -50%); /* Смещение, чтобы центр совпал с заданным положением */
+        height: 35%;
+        width: auto;
+    }
+
+    .second-button {
+        width: 73%;
+        font-size: 20px;
+        max-width: 320px;
+        height: 70px;
+        right: 15%;
+        top: 80%;
+    }
+
+    .tilted-text-container {
+        top: 15%;
+        width: 50%;
+        left: 50%;
+        transform: rotate(20deg); /* Угол наклона */
+        box-shadow: -200px 0 #FFFFFF, /* Левый нижний угол */ 200px 0 #FFFFFF; /* Правый верхний угол */
+    }
+
+    .tilted-text {
+        font-size: 30px;
+    }
+}

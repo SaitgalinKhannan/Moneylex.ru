@@ -1,0 +1,20 @@
+import "../styles/second_page.css"
+import icons from "../assets/second_page/icons.png"
+
+function SecondPage() {
+    return (
+        <div className="screen-container">
+            <div className={"tilted-text-container"}>
+                <div className="tilted-text">С ЛЮБОГО БАНКА</div>
+            </div>
+            <div className="second-text-block">
+            <div className="second-text-line">ДЛЯ ОБМЕНА РУБЛЕЙ</div>
+                <div className="second-text-line">ВЫБЕРИТЕ УДОБНЫЙ БАНК</div>
+            </div>
+            <img className={"second-icons"} src={icons} alt="icons"/>
+            <button className={"second-button"}>ОСТАВИТЬ ЗАЯВКУ</button>
+        </div>
+    )
+}
+
+export default SecondPage;

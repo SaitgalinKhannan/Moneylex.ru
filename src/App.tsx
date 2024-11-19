@@ -1,13 +1,18 @@
-import {useMediaQuery} from 'usehooks-ts'
-import FirstPageMobile from "./components/FirstPageMobile.tsx";
 import FirstPage from "./components/FirstPage.tsx";
+import SecondPage from "./components/SecondPage.tsx";
+import ThirdPage from "./components/ThirdPage.tsx";
+import ForthPage from "./components/ForthPage.tsx";
 
 function App() {
-    const isMobile = useMediaQuery('(max-width: 768px)')
+    /*const isMobile = useMediaQuery('(max-width: 768px)')*/
 
     return (
         <>
-            {isMobile ? (<FirstPageMobile/>) : (<FirstPage/>)}
+            {/*{isMobile ? (<FirstPageMobile/>) : (<FirstPage/>)}*/}
+            <FirstPage/>
+            <SecondPage/>
+            <ThirdPage/>
+            <ForthPage/>
         </>
     )
 }

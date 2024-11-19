@@ -1,0 +1,108 @@
+/* Общие стили для всех устройств */
+.screen-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.forth-button {
+    box-sizing: border-box;
+    position: absolute;
+    top: 80%;
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 10px;
+    isolation: isolate;
+
+    /* Размеры кнопки */
+    width: 73%;
+    height: 10%;
+
+    /* Фон и границы */
+    background: linear-gradient(90deg, #B4D608 0%, #CEF506 100%);
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    /* Вспомогательные свойства для родительского контейнера */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    /* Стили текста внутри кнопки */
+    font-family: Bowler, sans-serif; /* Подберите шрифт */
+    font-size: 18px; /* Настройте размер текста */
+    line-height: 20px; /* Настройте высоту строки */
+    text-align: center;
+    color: #000000; /* Цвет текста */
+    cursor: pointer; /* Указатель мыши */
+    transition: all 0.3s ease; /* Для плавности анимации */
+}
+
+/* Hover эффект */
+.forth-button:hover {
+    background: linear-gradient(90deg, #CEF506 0%, #B4D608 100%);
+    transform: scale(1.05); /* Увеличение на 5% при наведении */
+}
+
+/* Active эффект */
+.forth-button:active {
+    transform: scale(0.95); /* Уменьшение на 5% при клике */
+    background: linear-gradient(90deg, #A5C607 0%, #B9E506 100%);
+}
+
+.forth-page-tilted-text-container {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    display: inline-block;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание (если требуется) */
+    overflow: hidden;
+    transform: rotate(10deg); /* Угол наклона */
+    box-shadow: -200px 0 #FFFFFF, /* Левый нижний угол */ 200px 0 #FFFFFF; /* Правый верхний угол */
+}
+
+.forth-page-tilted-text {
+    font-family: Bowler, sans-serif;
+    font-size: 25px; /* Размер текста */
+    color: black; /* Цвет текста */
+    background: #FFFFFF;
+    padding: 10px 0 5px 0; /* Отступы внутри блока */
+    overflow: hidden;
+    width: 100%;
+    display: flex; /* Flexbox для выравнивания */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center;
+}
+
+/* Стили для смартфонов */
+@media (max-width: 650px) {
+
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+
+}
+
+/* Для компьютеров (ширина больше 1024px) */
+@media (min-width: 1025px) {
+    .forth-page-tilted-text-container {
+        top: 15%;
+        width: 50%;
+        left: 50%;
+        transform: rotate(20deg); /* Угол наклона */
+        box-shadow: -500px 0 #FFFFFF, /* Левый нижний угол */ 200px 0 #FFFFFF; /* Правый верхний угол */
+    }
+
+    .forth-page-tilted-text {
+        font-size: 30px;
+    }
+}
