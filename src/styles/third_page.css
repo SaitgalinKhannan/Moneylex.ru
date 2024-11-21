@@ -46,7 +46,7 @@
 
 .features-container {
     position: absolute;
-    top: 40%;
+    top: 45%;
     display: flex;
     flex-direction: column; /* Расположить элементы по вертикали */
     align-items: flex-start; /* Центрировать по горизонтали */
@@ -92,7 +92,7 @@
 .third-button {
     box-sizing: border-box;
     position: absolute;
-    top: 80%;
+    top: 85%;
     /* Layout */
     display: flex;
     flex-direction: row;
@@ -141,13 +141,13 @@
 /* Стили для смартфонов */
 @media (max-width: 650px) {
     .third-icons {
-        top: 29%;
+        top: 32%;
         height: 15%;
     }
 
     .third-button {
         width: 73%;
-        max-width: 320px;
+        max-width: 250px;
         height: 70px;
         font-size: 18px;
     }
@@ -166,12 +166,12 @@
 
 @media (min-width: 651px) and (max-width: 1024px) {
     .third-icons {
-        top: 30%;
+        top: 32%;
         height: 15%;
     }
 
     .third-button {
-        top: 80%;
+        top: 85%;
         width: 42%;
         max-width: 320px;
         height: 70px;
@@ -190,6 +190,22 @@
 
     .feature-line {
         display: inline; /* Объединяем строки в одну строку */
+    }
+
+    .white-text-container {
+        height: 70px;
+        padding-right: 10%;
+        background: white;
+    }
+
+    .white-text:first-child {
+        font-size: 25px;
+        padding: 5px 20px 0 0;
+    }
+
+    .white-text {
+        font-size: 25px;
+        padding: 8px 20px 0 50px;
     }
 }
 
@@ -213,24 +229,27 @@
     }
 
     .white-text-container {
-        height: 80px; /* Фиксированная высота */
+        height: 70px; /* Фиксированная высота */
+        width: 67%;
         display: flex; /* Flexbox для центрирования содержимого */
         align-items: center; /* Выравнивание по вертикали */
+        justify-content: end;
         white-space: nowrap; /* Запрещает перенос текста */
         text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
         background: white;
+        padding-right: 8%;
     }
 
     .white-text {
         display: inline; /* Выравнивает текст в одну линию */
-        font-size: 30px;
-        padding: 0 20px 0 0;
+        font-size: 25px;
+        padding: 5px 20px 0 0;
     }
 
     .white-text:first-child {
         display: inline; /* Выравнивает текст в одну линию */
-        font-size: 30px;
-        padding: 0 20px 0 40px;
+        font-size: 25px;
+        padding: 5px 20px 0 40px;
     }
 
     .features-container {

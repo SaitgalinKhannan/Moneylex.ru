@@ -4,8 +4,8 @@ import icons from "../assets/second_page/icons.png"
 function SecondPage() {
     return (
         <div className="screen-container">
-            <div className={"tilted-text-container"}>
-                <div className="tilted-text">С ЛЮБОГО БАНКА</div>
+            <div className={"second-white-text-container"}>
+                <div className="second-white-text">С ЛЮБОГО БАНКА</div>
             </div>
             <div className="second-text-block">
             <div className="second-text-line">ДЛЯ ОБМЕНА РУБЛЕЙ</div>

@@ -1,6 +1,7 @@
 /* Общие стили для всех устройств */
 .screen-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -58,51 +59,301 @@
     background: linear-gradient(90deg, #A5C607 0%, #B9E506 100%);
 }
 
-.forth-page-tilted-text-container {
+.forth-white-text-container {
     position: absolute;
-    top: 15%;
-    width: 100%;
-    display: inline-block;
+    top: 10%;
+    right: 0;
     justify-content: center; /* Горизонтальное выравнивание по центру */
     align-items: center; /* Вертикальное выравнивание (если требуется) */
-    overflow: hidden;
-    transform: rotate(10deg); /* Угол наклона */
-    box-shadow: -200px 0 #FFFFFF, /* Левый нижний угол */ 200px 0 #FFFFFF; /* Правый верхний угол */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);
 }
+
+.forth-white-text {
+    font-family: Bowler, sans-serif;
+    font-size: 25px;
+    color: black;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.forth-white-text:first-child {
+    padding-top: 5px;
+}
+
+/*.forth-page-tilted-text-container {
+    position: absolute;
+    top: 15%;
+    display: inline-block;
+    justify-content: center; !* Горизонтальное выравнивание по центру *!
+    align-items: center; !* Вертикальное выравнивание (если требуется) *!
+    overflow: hidden;
+}
+
 
 .forth-page-tilted-text {
     font-family: Bowler, sans-serif;
-    font-size: 25px; /* Размер текста */
-    color: black; /* Цвет текста */
+    font-size: 25px; !* Размер текста *!
+    color: black; !* Цвет текста *!
     background: #FFFFFF;
-    padding: 10px 0 5px 0; /* Отступы внутри блока */
+    padding: 10px 0 5px 0; !* Отступы внутри блока *!
     overflow: hidden;
-    width: 100%;
-    display: flex; /* Flexbox для выравнивания */
-    justify-content: center; /* Горизонтальное выравнивание по центру */
+    display: flex; !* Flexbox для выравнивания *!
+    justify-content: center; !* Горизонтальное выравнивание по центру *!
     align-items: center;
+}*/
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Расстояние между блоками */
+}
+
+.option {
+    position: relative; /* Установите относительное позиционирование для контейнера */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000; /* Цвет фона */
+    border: 2px solid #b0d206; /* Цвет рамки */
+    border-radius: 20px;
+    width: 82%; /* Фиксированная ширина */
+    padding: 20px;
+    text-align: center;
+    overflow: visible; /* Позволяет иконке выступать за границы */
+}
+
+.option-first-icon {
+    position: absolute; /* Абсолютное позиционирование */
+    top: -40px; /* Сдвигает иконку вверх относительно контейнера */
+    left: 50%; /* Центрует иконку горизонтально */
+    transform: translateX(-50%); /* Учитывает ширину иконки для центрирования */
+    width: 78px; /* Ширина иконки */
+    height: 78px; /* Высота иконки */
+}
+
+.option-second-icon {
+    position: absolute; /* Абсолютное позиционирование */
+    top: -40px; /* Сдвигает иконку вверх относительно контейнера */
+    left: 50%; /* Центрует иконку горизонтально */
+    transform: translateX(-50%); /* Учитывает ширину иконки для центрирования */
+    width: 71px; /* Ширина иконки */
+    height: 71px; /* Высота иконки */
+}
+
+.option-third-icon {
+    position: absolute; /* Абсолютное позиционирование */
+    top: -40px; /* Сдвигает иконку вверх относительно контейнера */
+    left: 50%; /* Центрует иконку горизонтально */
+    transform: translateX(-50%); /* Учитывает ширину иконки для центрирования */
+    width: 76px; /* Ширина иконки */
+    height: 76px; /* Высота иконки */
+}
+
+
+/*.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000; !* Цвет фона *!
+    border: 2px solid #b0d206; !* Цвет рамки *!
+    border-radius: 20px;
+    width: 364px; !* Фиксированная ширина *!
+    padding: 20px;
+    text-align: center;
+}
+
+.option-icon {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 15px; !* Расстояние от иконки до текста *!
+}*/
+
+.option-title {
+    font-family: Bowler, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.option-description {
+    font-family: Bowler, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffff;
 }
 
 /* Стили для смартфонов */
 @media (max-width: 650px) {
+    .forth-button {
+        top: 85%;
+        width: 73%;
+        max-width: 250px;
+        height: 70px;
+        font-size: 18px;
+    }
 
+    .options-container {
+        gap: 15px;
+        margin-top: 60px;
+    }
+
+    .option {
+        border: none; /* Убираем рамки у блоков */
+        gap: 10px;
+        padding: 15px; /* Уменьшено внутреннее расстояние */
+        width: 90%; /* Увеличиваем ширину для лучшего заполнения экрана */
+    }
+
+    .option-first-icon,
+    .option-second-icon,
+    .option-third-icon {
+        width: 60px; /* Уменьшена ширина иконок */
+        height: 60px; /* Уменьшена высота иконок */
+        top: -30px; /* Подстраиваем положение */
+    }
+
+    .option-second-icon {
+        top: -35px;
+    }
+
+    .option-title {
+        font-size: 14px; /* Уменьшен размер текста заголовка */
+        margin-bottom: 10px;
+        line-height: 16px;
+    }
+
+    .option-description {
+        font-size: 12px; /* Уменьшен размер текста описания */
+        line-height: 14px;
+    }
 }
 
 @media (min-width: 651px) and (max-width: 1024px) {
+    .forth-button {
+        top: 85%;
+        width: 42%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 20px;
+    }
 
+    .forth-white-text-container {
+        height: 70px;
+        padding-right: 10%;
+        background: white;
+    }
+
+    .forth-white-text:first-child {
+        font-size: 25px;
+        padding: 8px 20px 0 50px;
+    }
+
+    .forth-white-text {
+        font-size: 25px;
+        padding: 5px 20px 0 0;
+    }
+
+    .options-container {
+        gap: 50px;
+        margin-top: 30px;
+    }
+
+    .option-title {
+        margin-top: 25px;
+        font-size: 18px;
+    }
+
+    .option-description {
+        font-size: 14px;
+    }
 }
 
 /* Для компьютеров (ширина больше 1024px) */
 @media (min-width: 1025px) {
-    .forth-page-tilted-text-container {
+    .forth-button {
+        width: 73%;
+        font-size: 20px;
+        max-width: 320px;
+        height: 70px;
+        top: 85%;
+    }
+
+    .forth-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        width: 67%;
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        justify-content: end;
+        white-space: nowrap; /* Запрещает перенос текста */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
+        background: white;
+        padding-right: 8%;
+    }
+
+    .forth-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 20px 0 0;
+    }
+
+    .forth-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 20px 0 40px;
+    }
+
+    .options-container {
+        display: flex; /* Flexbox для горизонтального расположения */
+        flex-direction: row; /* Размещаем элементы в строку */
+        justify-content: center; /* Центруем элементы по горизонтали */
+        align-items: flex-start; /* Выравниваем элементы по верхнему краю */
+        gap: 30px; /* Расстояние между элементами */
+        width: 100%; /* Устанавливаем ширину контейнера */
+        padding-top: 20px; /* Добавляем верхний отступ */
+    }
+
+    .option {
+        width: 300px; /* Фиксированная ширина каждого блока */
+        height: 120px;
+    }
+
+    .option-title {
+        margin-top: 25px;
+        font-size: 16px;
+    }
+
+    .option-description {
+        font-size: 12px;
+    }
+
+    /*.forth-page-tilted-text-container {
         top: 15%;
-        width: 50%;
-        left: 50%;
-        transform: rotate(20deg); /* Угол наклона */
-        box-shadow: -500px 0 #FFFFFF, /* Левый нижний угол */ 200px 0 #FFFFFF; /* Правый верхний угол */
+        height: 80px;
+        right: 0;
+        display: flex; !* Flexbox для центрирования содержимого *!
+        align-items: center; !* Выравнивание по вертикали *!
+        white-space: nowrap; !* Запрещает перенос текста *!
+        text-overflow: ellipsis;
+        background: white;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);
     }
 
     .forth-page-tilted-text {
+        display: inline; !* Выравнивает текст в одну линию *!
         font-size: 30px;
+        padding: 0 20px 0 0;
     }
+
+    .forth-page-tilted-text:first-child {
+        display: inline; !* Выравнивает текст в одну линию *!
+        font-size: 30px;
+        padding: 0 8px 0 40px;
+    }*/
 }

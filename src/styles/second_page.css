@@ -9,31 +9,52 @@
     overflow-x: hidden;
 }
 
-.tilted-text-container {
+.second-white-text-container {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание (если требуется) */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);
+}
+
+.second-white-text {
+    font-family: Bowler, sans-serif;
+    font-size: 25px;
+    color: black;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+/*.tilted-text-container {
     position: absolute;
     top: 15%;
     width: 100%;
     display: inline-block;
-    justify-content: center; /* Горизонтальное выравнивание по центру */
-    align-items: center; /* Вертикальное выравнивание (если требуется) */
+    justify-content: center; !* Горизонтальное выравнивание по центру *!
+    align-items: center; !* Вертикальное выравнивание (если требуется) *!
     overflow: hidden;
-    transform: rotate(-10deg); /* Угол наклона */
-    box-shadow: -200px 0 #FFFFFF, /* Левый нижний угол */ 200px 0 #FFFFFF; /* Правый верхний угол */
+    transform: rotate(-10deg); !* Угол наклона *!
+    box-shadow: -200px 0 #FFFFFF, !* Левый нижний угол *! 200px 0 #FFFFFF; !* Правый верхний угол *!
 }
 
 .tilted-text {
     font-family: Bowler, sans-serif;
-    font-size: 25px; /* Размер текста */
-    color: black; /* Цвет текста */
+    font-size: 25px; !* Размер текста *!
+    color: black; !* Цвет текста *!
     background: #FFFFFF;
-    padding: 10px 0 5px 0; /* Отступы внутри блока */
+    padding: 10px 0 5px 0; !* Отступы внутри блока *!
     overflow: hidden;
     width: 100%;
-    display: flex; /* Flexbox для выравнивания */
-    justify-content: center; /* Горизонтальное выравнивание по центру */
+    display: flex; !* Flexbox для выравнивания *!
+    justify-content: center; !* Горизонтальное выравнивание по центру *!
     align-items: center;
-}
-
+}*/
 
 .second-text-block {
     position: absolute;
@@ -70,7 +91,7 @@
 .second-button {
     box-sizing: border-box;
     position: absolute;
-    top: 80%;
+    top: 85%;
     /* Layout */
     display: flex;
     flex-direction: row;
@@ -119,7 +140,7 @@
 /* Стили для смартфонов */
 @media (max-width: 650px) {
     .second-text-block {
-        top: 30%;
+        top: 32%;
         line-height: 16px;
         width: 100%;
     }
@@ -134,22 +155,40 @@
     }
 
     .second-icons {
-        top: 55%;
-        height: 18%;
+        top: 60%;
+        height: 25%;
         width: auto;
     }
 
     .second-button {
         width: 73%;
-        max-width: 320px;
+        max-width: 250px;
         height: 70px;
         font-size: 18px;
+    }
+
+    .second-white-text-container {
+        height: 50px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        background: white;
+    }
+
+    .second-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 20px 0 50px;
+    }
+
+    .second-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 0 20px 0 0;
     }
 }
 
 @media (min-width: 651px) and (max-width: 1024px) {
     .second-text-block {
-        top: 30%;
+        top: 32%;
         line-height: 20px;
         width: 100%;
     }
@@ -165,17 +204,39 @@
     }
 
     .second-icons {
-        top: 58%;
+        top: 60%;
         height: 25%;
         width: auto;
     }
 
     .second-button {
-        top: 80%;
+        top: 85%;
         width: 42%;
         max-width: 320px;
         height: 70px;
         font-size: 20px;
+    }
+
+    .second-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        white-space: nowrap; /* Запрещает перенос текста */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
+        background: white;
+        padding-right: 10%;
+    }
+
+    .second-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 20px 0 50px;
+    }
+
+    .second-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 0 20px 0 0;
     }
 }
 
@@ -214,18 +275,42 @@
         max-width: 320px;
         height: 70px;
         right: 15%;
-        top: 80%;
+        top: 85%;
     }
 
-    .tilted-text-container {
+    .second-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        width: 67%;
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        justify-content: end;
+        white-space: nowrap; /* Запрещает перенос текста */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
+        background: white;
+        padding-right: 8%;
+    }
+
+    .second-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 30px;
+        padding: 5px 20px 0 40px;
+    }
+
+    .second-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 30px;
+        padding: 0 20px 0 0;
+    }
+
+    /*.tilted-text-container {
         top: 15%;
         width: 50%;
         left: 50%;
-        transform: rotate(20deg); /* Угол наклона */
-        box-shadow: -200px 0 #FFFFFF, /* Левый нижний угол */ 200px 0 #FFFFFF; /* Правый верхний угол */
+        transform: rotate(20deg); !* Угол наклона *!
+        box-shadow: -200px 0 #FFFFFF, !* Левый нижний угол *! 200px 0 #FFFFFF; !* Правый верхний угол *!
     }
 
     .tilted-text {
         font-size: 30px;
-    }
+    }*/
 }

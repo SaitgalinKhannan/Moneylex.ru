@@ -211,7 +211,7 @@
     }
 
     .text-block {
-        top: 35%;
+        top: 25%;
         line-height: 16px;
     }
 
@@ -226,9 +226,9 @@
 
     .icons {
         top: 42%;
-        height: 35%;
+        height: 30%;
         width: auto;
-        right: 1%;
+        right: 5%;
     }
 
     .video {
@@ -295,7 +295,7 @@
         top: 45%;
         height: 40%;
         width: auto;
-        right: 1%;
+        right: 4%;
     }
 
     .video {
