@@ -1,0 +1,313 @@
+/* Общие стили для всех устройств */
+.fifth-screen-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.fifth-white-text-container {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание (если требуется) */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);
+}
+
+.fifth-white-text {
+    font-family: Bowler, sans-serif;
+    font-size: 25px;
+    color: black;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.fifth-white-text:first-child {
+    padding-top: 5px;
+}
+
+.fifth-icon {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    height: 15%;
+    width: auto;
+    z-index: 0;
+}
+
+.fifth-button {
+    box-sizing: border-box;
+    position: absolute;
+    top: 85%;
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 10px;
+    isolation: isolate;
+
+    /* Размеры кнопки */
+    width: 73%;
+    height: 10%;
+
+    /* Фон и границы */
+    background: linear-gradient(90deg, #B4D608 0%, #CEF506 100%);
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    /* Вспомогательные свойства для родительского контейнера */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    /* Стили текста внутри кнопки */
+    font-family: Bowler, sans-serif; /* Подберите шрифт */
+    font-size: 18px; /* Настройте размер текста */
+    line-height: 20px; /* Настройте высоту строки */
+    text-align: center;
+    color: #000000; /* Цвет текста */
+    cursor: pointer; /* Указатель мыши */
+    transition: all 0.3s ease; /* Для плавности анимации */
+}
+
+/* Hover эффект */
+.fifth-button:hover {
+    background: linear-gradient(90deg, #CEF506 0%, #B4D608 100%);
+    transform: scale(1.05); /* Увеличение на 5% при наведении */
+}
+
+/* Active эффект */
+.fifth-button:active {
+    transform: scale(0.95); /* Уменьшение на 5% при клике */
+    background: linear-gradient(90deg, #A5C607 0%, #B9E506 100%);
+}
+
+.fifth-stats-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-group {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'BOWLER', sans-serif;
+    font-weight: 400;
+    line-height: 40px;
+    color: #B3D408;
+}
+
+.stat-number .number {
+    font-size: 30px;
+}
+
+.stat-number .text {
+    font-size: 20px;
+}
+
+
+/*.stat-group {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'BOWLER', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #B3D408;
+}*/
+
+.stat-description {
+    font-family: Bowler, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+/*.stat-link {
+    font-family: 'BOWLER', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #D4FF00;
+    text-align: center;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}*/
+
+.stat-link {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    font-family: 'BOWLER', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #D4FF00;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.stat-link-icon {
+    width: 34px;
+    height: 18px;
+    margin-left: 10px; /* Отступ между текстом и иконкой */
+}
+
+/* Стили для смартфонов */
+@media (max-width: 650px) {
+    .fifth-icon {
+        top: 60%;
+        transform: translate(70%, -50%);
+        height: 80%;
+        width: auto;
+        right: 0;
+    }
+
+    .fifth-white-text {
+        font-size: 20px;
+    }
+
+    .fifth-button {
+        width: 73%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 18px;
+    }
+
+    .feature-text {
+        flex-wrap: wrap; /* Разрешает перенос строк на мобильных устройствах */
+        text-align: left; /* Текст выравнивается по левому краю */
+        gap: 0; /* Добавляем пробел между словами */
+    }
+
+    .feature-line {
+        display: block; /* Разделение строк только на мобильных устройствах */
+        white-space: nowrap;
+    }
+
+    .fifth-stats-container {
+        position: absolute;
+        top: 59%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+    .fifth-icon {
+        top: 60%;
+        transform: translate(50%, -50%);
+        height: 80%;
+        width: auto;
+        right: 0;
+    }
+
+    .fifth-button {
+        top: 85%;
+        width: 42%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .fifth-white-text-container {
+        height: 70px;
+        padding-right: 10%;
+        background: white;
+    }
+
+    .white-text:first-child {
+        font-size: 25px;
+        padding: 5px 20px 0 0;
+    }
+
+    .white-text {
+        font-size: 25px;
+        padding: 8px 20px 0 50px;
+    }
+
+    .fifth-stats-container {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+/* Для компьютеров (ширина больше 1024px) */
+@media (min-width: 1025px) {
+    .fifth-icon {
+        position: absolute;
+        top: 50%;
+        left: -5%;
+        transform: translateY(-50%);
+        height: 100%;
+        width: auto;
+    }
+
+    .fifth-button {
+        width: 73%;
+        font-size: 20px;
+        max-width: 320px;
+        height: 70px;
+        top: 80%;
+    }
+
+    .fifth-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        width: 55%;
+        background: white;
+        padding-right: 8%;
+    }
+
+    .fifth-white-text {
+        font-size: 25px;
+        padding: 5px 20px 0 0;
+    }
+
+    .fifth-white-text:first-child {
+        font-size: 25px;
+        padding: 5px 20px 0 40px;
+    }
+
+    .fifth-stats-container {
+        position: absolute;
+        top: 60%;
+        right: 25%; /* Отступ от правого края экрана */
+        transform: translate(25%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+}

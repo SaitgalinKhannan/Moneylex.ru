@@ -1,0 +1,118 @@
+.sixth-screen-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-sizing: border-box;
+    color: white; /* Белый текст */
+    font-family: Intro Book, sans-serif; /* Общий стиль текста */
+    position: relative;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: NotoColorEmojiLimited;
+    unicode-range: U+1F1E6-1F1FF;
+    src: url("https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf");
+}
+
+.sixth-screen-container h3 {
+    font-family: Bowler, sans-serif;
+    font-size: 20px;
+    color: #D4FF00;
+    margin: 20px auto;
+}
+
+.sixth-screen-column {
+    flex: 1; /* Колонка занимает равное пространство */
+    min-width: 300px; /* Минимальная ширина колонок */
+    max-width: 50%; /* Максимальная ширина колонок на ПК */
+    z-index: 10;
+}
+
+.sixth-screen-column p {
+    display: flex; /* Используем Flexbox для выравнивания */
+    flex-wrap: wrap; /* Позволяем тексту переноситься */
+    align-items: flex-start; /* Вертикальное выравнивание */
+    gap: 5px; /* Расстояние между элементами */
+    margin: 10px 0; /* Отступы между строками */
+    white-space: normal; /* Разрешаем перенос строк */
+}
+
+.sixth-screen-column p span.country {
+    font-weight: 900; /* Толщина шрифта для названия страны */
+    white-space: nowrap; /* Запрещаем переносить название страны */
+    flex-shrink: 0; /* Гарантируем, что страна не будет сжиматься */
+}
+
+.sixth-screen-column p span.flag {
+    font-family: 'NotoColorEmojiLimited', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.sixth-icon {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    height: 15%;
+    width: auto;
+    z-index: 0;
+}
+
+/* На маленьких экранах одна колонка */
+@media (max-width: 650px) {
+    .sixth-screen-container {
+        padding: 0 20px 20px 20px;
+    }
+
+    .sixth-screen-column {
+        max-width: 100%;
+    }
+
+    .sixth-icon {
+        top: 80%;
+        transform: translate(70%, -50%);
+        height: 80vh;
+        width: auto;
+        right: 0;
+    }
+}
+
+/* На планшетах */
+@media (min-width: 651px) and (max-width: 1024px) {
+    .sixth-screen-container {
+        padding: 0 80px 20px 80px;
+    }
+
+    .sixth-screen-column {
+        max-width: 100%;
+    }
+
+    .sixth-icon {
+        top: 65%;
+        transform: translate(50%, -50%);
+        height: 80vh;
+        width: auto;
+        right: 0;
+    }
+}
+
+/* На ПК */
+@media (min-width: 1025px) {
+    .sixth-screen-container {
+        padding: 0 80px 20px 80px;
+    }
+
+    .sixth-screen-column {
+        max-width: 50%;
+    }
+
+    .sixth-icon {
+        position: absolute;
+        top: 65%;
+        left: -5%;
+        transform: translateY(-50%);
+        height: 70vh;
+        width: auto;
+    }
+}

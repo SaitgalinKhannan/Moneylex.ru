@@ -1,0 +1,214 @@
+/* Общие стили для всех устройств */
+.eleventh-screen-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.eleventh-white-text-container {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    min-width: 270px;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание (если требуется) */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);
+}
+
+.eleventh-white-text {
+    font-family: Bowler, sans-serif;
+    font-size: 25px;
+    color: black;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.eleventh-button {
+    box-sizing: border-box;
+    position: absolute;
+    top: 80%;
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 10px;
+    isolation: isolate;
+
+    /* Размеры кнопки */
+    width: 73%;
+    height: 10%;
+
+    /* Фон и границы */
+    background: linear-gradient(90deg, #B4D608 0%, #CEF506 100%);
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    /* Вспомогательные свойства для родительского контейнера */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    /* Стили текста внутри кнопки */
+    font-family: Bowler, sans-serif; /* Подберите шрифт */
+    font-size: 18px; /* Настройте размер текста */
+    line-height: 20px; /* Настройте высоту строки */
+    text-align: center;
+    color: #000000; /* Цвет текста */
+    cursor: pointer; /* Указатель мыши */
+    transition: all 0.3s ease; /* Для плавности анимации */
+}
+
+/* Hover эффект */
+.eleventh-button:hover {
+    background: linear-gradient(90deg, #CEF506 0%, #B4D608 100%);
+    transform: scale(1.05); /* Увеличение на 5% при наведении */
+}
+
+/* Active эффект */
+.eleventh-button:active {
+    transform: scale(0.95); /* Уменьшение на 5% при клике */
+    background: linear-gradient(90deg, #A5C607 0%, #B9E506 100%);
+}
+
+/* Container for icons */
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    max-width: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Individual icon styles */
+.social-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for icons */
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Стили для смартфонов */
+@media (max-width: 650px) {
+    .eleventh-white-text-container {
+        height: 50px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        background: white;
+    }
+
+    .eleventh-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 20px;
+        padding: 5px 20px 0 50px;
+    }
+
+    .eleventh-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 20px;
+        padding: 0 20px 0 0;
+    }
+
+    .eleventh-button {
+        top: 85%;
+        width: 73%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+    .eleventh-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        white-space: nowrap; /* Запрещает перенос текста */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
+        background: white;
+        padding-right: 10%;
+    }
+
+    .eleventh-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 20px 0 50px;
+    }
+
+    .eleventh-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 0 20px 0 0;
+    }
+
+    .eleventh-button {
+        top: 85%;
+        width: 42%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 20px;
+    }
+}
+
+/* Для компьютеров (ширина больше 1024px) */
+@media (min-width: 1025px) {
+    .eleventh-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        white-space: nowrap; /* Запрещает перенос текста */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
+        background: white;
+        padding-right: 10%;
+    }
+
+    .eleventh-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        min-width: 270px;
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        justify-content: end;
+        background: white;
+        padding-right: 8%;
+    }
+
+    .eleventh-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 20px 0 40px;
+    }
+
+    .eleventh-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 0 20px 0 0;
+    }
+
+    .eleventh-button {
+        width: 75%;
+        font-size: 20px;
+        max-width: 320px;
+        height: 70px;
+        top: 80%;
+    }
+}

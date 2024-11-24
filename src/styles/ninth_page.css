@@ -1,0 +1,292 @@
+/* Общие стили для всех устройств */
+.ninth-screen-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.ninth-white-text-container {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    min-width: 270px;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание (если требуется) */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);
+}
+
+.ninth-white-text {
+    font-family: Bowler, sans-serif;
+    font-size: 25px;
+    color: black;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.ninth-video-and-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ninth-video-container {
+    position: relative;
+    border-radius: 50%; /* Делаем контейнер круглым */
+    background: linear-gradient(180deg, #D4FF00 29.28%, #FFFFFF 85.29%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    z-index: 1;
+}
+
+.ninth-circle-video {
+    position: absolute;
+    top: 50%; /* Центрируем относительно контейнера */
+    transform: translateY(-50%);
+    width: calc(100%); /* Видео занимает всю ширину контейнера */
+    height: auto; /* Высота автоматически подстраивается */
+    object-fit: cover;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.video-hidden {
+    width: 0;
+    height: 0;
+}
+
+.ninth-video-container::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    border: 1px solid #D4FF00;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 2;
+
+}
+
+.ninth-video-container::after {
+    content: '';
+    position: absolute;
+    top: -37px;
+    left: -37px;
+    width: calc(100% + 74px);
+    height: calc(100% + 74px);
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotate 10s linear infinite;
+    z-index: -1;
+    background-image: conic-gradient(
+            #D4FF00 0deg 90deg,
+            #2A3300 90deg 360deg
+    );
+    mask: radial-gradient(
+            circle,
+            transparent calc(70% - 10px), /* Прозрачная внутренняя часть */ black calc(70% - 8px) /* Черная внешняя часть для видимости краев */
+    );
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.left-arrow, .right-arrow {
+    position: absolute;
+    width: 20px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.left-arrow {
+    padding-right: 150px;
+    transform: translateX(-50%);
+}
+
+.right-arrow {
+    padding-left: 150px;
+    transform: translateX(50%);
+}
+
+/* The dots/bullets/indicators */
+.video-and-dots-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dots {
+    position: absolute;
+    top: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px; /* Добавим немного пространства между точками */
+    background-color: white;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #D4FF00;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Стили для смартфонов */
+@media (max-width: 650px) {
+    .ninth-white-text-container {
+        height: 50px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        background: white;
+    }
+
+    .ninth-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 20px;
+        padding: 5px 20px 0 50px;
+    }
+
+    .ninth-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 20px;
+        padding: 0 20px 0 0;
+    }
+
+    .ninth-video-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 200px;
+        width: 200px;
+    }
+
+    .ninth-video-and-arrows {
+        flex-direction: column;
+    }
+
+    .left-arrow, .right-arrow {
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+    .ninth-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        white-space: nowrap; /* Запрещает перенос текста */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
+        background: white;
+        padding-right: 10%;
+    }
+
+    .ninth-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 20px 0 50px;
+    }
+
+    .ninth-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 0 20px 0 0;
+    }
+
+    .left-arrow {
+        padding-right: 250px;
+        transform: translateX(-50%);
+    }
+
+    .right-arrow {
+        padding-left: 250px;
+        transform: translateX(50%);
+    }
+
+    .dots {
+        top: 85%;
+    }
+}
+
+/* Для компьютеров (ширина больше 1024px) */
+@media (min-width: 1025px) {
+    .ninth-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        white-space: nowrap; /* Запрещает перенос текста */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
+        background: white;
+        padding-right: 10%;
+    }
+
+    .ninth-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        min-width: 270px;
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        justify-content: end;
+        background: white;
+        padding-right: 8%;
+    }
+
+    .ninth-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 20px 0 40px;
+    }
+
+    .ninth-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 0 20px 0 0;
+    }
+
+    .left-arrow {
+        padding-right: 250px;
+        transform: translateX(-50%);
+    }
+
+    .right-arrow {
+        padding-left: 250px;
+        transform: translateX(50%);
+    }
+
+    .dots {
+        top: 85%;
+    }
+}

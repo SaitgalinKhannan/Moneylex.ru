@@ -162,7 +162,7 @@
 
     .second-button {
         width: 73%;
-        max-width: 250px;
+        max-width: 320px;
         height: 70px;
         font-size: 18px;
     }
@@ -175,13 +175,13 @@
 
     .second-white-text:first-child {
         display: inline; /* Выравнивает текст в одну линию */
-        font-size: 25px;
+        font-size: 20px;
         padding: 5px 20px 0 50px;
     }
 
     .second-white-text {
         display: inline; /* Выравнивает текст в одну линию */
-        font-size: 25px;
+        font-size: 20px;
         padding: 0 20px 0 0;
     }
 }
@@ -280,7 +280,7 @@
 
     .second-white-text-container {
         height: 70px; /* Фиксированная высота */
-        width: 67%;
+        width: 55%;
         display: flex; /* Flexbox для центрирования содержимого */
         align-items: center; /* Выравнивание по вертикали */
         justify-content: end;
@@ -292,13 +292,13 @@
 
     .second-white-text:first-child {
         display: inline; /* Выравнивает текст в одну линию */
-        font-size: 30px;
+        font-size: 25px;
         padding: 5px 20px 0 40px;
     }
 
     .second-white-text {
         display: inline; /* Выравнивает текст в одну линию */
-        font-size: 30px;
+        font-size: 25px;
         padding: 0 20px 0 0;
     }
 

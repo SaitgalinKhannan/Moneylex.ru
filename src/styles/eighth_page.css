@@ -1,0 +1,323 @@
+/* Общие стили для всех устройств */
+.eighth-screen-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.eighth-button {
+    box-sizing: border-box;
+    position: absolute;
+    top: 80%;
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 10px;
+    isolation: isolate;
+
+    /* Размеры кнопки */
+    width: 73%;
+    height: 10%;
+
+    /* Фон и границы */
+    background: linear-gradient(90deg, #B4D608 0%, #CEF506 100%);
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    /* Вспомогательные свойства для родительского контейнера */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    /* Стили текста внутри кнопки */
+    font-family: Bowler, sans-serif; /* Подберите шрифт */
+    font-size: 18px; /* Настройте размер текста */
+    line-height: 20px; /* Настройте высоту строки */
+    text-align: center;
+    color: #000000; /* Цвет текста */
+    cursor: pointer; /* Указатель мыши */
+    transition: all 0.3s ease; /* Для плавности анимации */
+}
+
+/* Hover эффект */
+.eighth-button:hover {
+    background: linear-gradient(90deg, #CEF506 0%, #B4D608 100%);
+    transform: scale(1.05); /* Увеличение на 5% при наведении */
+}
+
+/* Active эффект */
+.eighth-button:active {
+    transform: scale(0.95); /* Уменьшение на 5% при клике */
+    background: linear-gradient(90deg, #A5C607 0%, #B9E506 100%);
+}
+
+.eighth-white-text-container {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание (если требуется) */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);
+}
+
+.eighth-white-text {
+    font-family: Bowler, sans-serif;
+    font-size: 25px;
+    color: black;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.eighth-white-text:first-child {
+    padding-top: 5px;
+}
+
+.circle-image {
+    position: absolute;
+    top: 51%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
+}
+
+.eighth-icons {
+    position: absolute;
+    right: 0;
+    top: 42%;
+    transform: translateY(-50%);
+    /*height: auto;
+    width: 46%;*/
+    height: 25%;
+    width: auto;
+    z-index: 0;
+}
+
+.video-container {
+    position: relative;
+    border-radius: 50%; /* Делаем контейнер круглым */
+    background: linear-gradient(180deg, #D4FF00 29.28%, #FFFFFF 85.29%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    z-index: 100;
+}
+
+.circle-video {
+    position: absolute;
+    top: 50%; /* Центрируем относительно контейнера */
+    transform: translateY(-50%);
+    width: calc(100%); /* Видео занимает всю ширину контейнера */
+    height: auto; /* Высота автоматически подстраивается */
+    object-fit: cover;
+    z-index: 100;
+    border-radius: 50%;
+}
+
+.video-container::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    border: 1px solid #D4FF00;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 2;
+
+}
+
+.video-container::after {
+    content: '';
+    position: absolute;
+    top: -37px;
+    left: -37px;
+    width: calc(100% + 74px);
+    height: calc(100% + 74px);
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotate 10s linear infinite;
+    z-index: -1;
+    background-image: conic-gradient(
+            #D4FF00 0deg 90deg,
+            #2A3300 90deg 360deg
+    );
+    mask: radial-gradient(
+            circle,
+            transparent calc(70% - 10px), /* Прозрачная внутренняя часть */
+            black calc(70% - 8px) /* Черная внешняя часть для видимости краев */
+    );
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*.video-container::after {
+    content: '';
+    position: absolute;
+    top: -37px;
+    left: -37px;
+    width: calc(100% + 74px);
+    height: calc(100% + 74px);
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 1000;
+    animation: rotate 10s linear infinite;
+    background: conic-gradient(
+            #D4FF00 0deg 90deg,
+            grey 90deg 360deg
+    );
+}*/
+
+/* Стили для смартфонов */
+@media (max-width: 650px) {
+    .eighth-button {
+        top: 85%;
+        width: 73%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 18px;
+    }
+
+    .eighth-white-text {
+        font-size: 20px;
+    }
+
+    .circle-image {
+        max-width: 90%;
+    }
+
+    .video-container {
+        position: absolute;
+        top: 52%;
+        transform: translateY(-50%);
+        height: 280px;
+        width: 280px;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+    .eighth-button {
+        top: 85%;
+        width: 42%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .eighth-white-text-container {
+        height: 70px;
+        padding-right: 10%;
+        background: #FFFFFF;
+    }
+
+    .eighth-white-text:first-child {
+        font-size: 25px;
+        padding: 8px 20px 0 50px;
+    }
+
+    .eighth-white-text {
+        font-size: 25px;
+        padding: 5px 20px 0 0;
+    }
+
+    .circle-image {
+        top: 50%; /* Центрирование по вертикали */
+        left: 15%; /* Центрирование на левой половине экрана */
+        transform: translate(-25%, -50%); /* Смещение, чтобы центр совпал с заданным положением */
+        height: auto;
+        width: 40%;
+    }
+
+    .video-container {
+        position: absolute;
+        top: 50%; /* Центрирование по вертикали */
+        left: 20%; /* Центрирование на левой половине экрана */
+        transform: translate(-25%, -50%); /* Смещение, чтобы центр совпал с заданным положением */
+        height: 300px;
+        width: 300px;
+    }
+
+    .eighth-icons {
+        top: 50%;
+        height: auto;
+        width: 40%;
+        right: 15%;
+        transform: translate(25%, -50%);
+    }
+}
+
+/* Для компьютеров (ширина больше 1024px) */
+@media (min-width: 1025px) {
+    .eighth-button {
+        width: 75%;
+        font-size: 20px;
+        max-width: 320px;
+        height: 70px;
+        top: 80%;
+    }
+
+    .eighth-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        width: 55%;
+        background: white;
+        padding-right: 8%;
+    }
+
+    .eighth-white-text {
+        font-size: 25px;
+        padding: 5px 20px 0 0;
+    }
+
+    .eighth-white-text:first-child {
+        font-size: 25px;
+        padding: 5px 20px 0 40px;
+    }
+
+    .circle-image {
+        top: 50%; /* Центрирование по вертикали */
+        left: 25%; /* Центрирование на левой половине экрана */
+        transform: translate(-50%, -50%); /* Смещение, чтобы центр совпал с заданным положением */
+        height: 55%;
+        width: auto;
+    }
+
+    .video-container {
+        position: absolute;
+        top: 50%; /* Центрирование по вертикали */
+        left: 20%; /* Центрирование на левой половине экрана */
+        transform: translate(-25%, -50%); /* Смещение, чтобы центр совпал с заданным положением */
+        height: 350px;
+        width: 350px;
+    }
+
+    .eighth-icons {
+        top: 50%;
+        height: 50%;
+        width: auto;
+        right: 25%;
+        transform: translate(50%, -50%);
+    }
+}

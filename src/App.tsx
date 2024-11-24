@@ -2,17 +2,28 @@ import FirstPage from "./components/FirstPage.tsx";
 import SecondPage from "./components/SecondPage.tsx";
 import ThirdPage from "./components/ThirdPage.tsx";
 import ForthPage from "./components/ForthPage.tsx";
+import FifthPage from "./components/FifthPage.tsx";
+import SixthPage from "./components/SixthPage.tsx";
+import EighthPage from "./components/EighthPage.tsx";
+import NinthPage from "./components/NinthPage.tsx";
+import TenthPage from "./components/TenthPage.tsx";
+import EleventhPage from "./components/EleventhPage.tsx";
 
 function App() {
     /*const isMobile = useMediaQuery('(max-width: 768px)')*/
 
     return (
         <>
-            {/*{isMobile ? (<FirstPageMobile/>) : (<FirstPage/>)}*/}
             <FirstPage/>
             <SecondPage/>
             <ThirdPage/>
             <ForthPage/>
+            <FifthPage/>
+            <SixthPage/>
+            <EighthPage/>
+            <NinthPage/>
+            <TenthPage/>
+            <EleventhPage/>
         </>
     )
 }

@@ -147,7 +147,7 @@
 
     .third-button {
         width: 73%;
-        max-width: 250px;
+        max-width: 320px;
         height: 70px;
         font-size: 18px;
     }
@@ -161,6 +161,10 @@
     .feature-line {
         display: block; /* Разделение строк только на мобильных устройствах */
         white-space: nowrap;
+    }
+
+    .white-text {
+        font-size: 20px;
     }
 }
 
@@ -230,7 +234,7 @@
 
     .white-text-container {
         height: 70px; /* Фиксированная высота */
-        width: 67%;
+        width: 55%;
         display: flex; /* Flexbox для центрирования содержимого */
         align-items: center; /* Выравнивание по вертикали */
         justify-content: end;
@@ -249,7 +253,7 @@
     .white-text:first-child {
         display: inline; /* Выравнивает текст в одну линию */
         font-size: 25px;
-        padding: 5px 20px 0 40px;
+        padding: 5px 10px 0 40px;
     }
 
     .features-container {

@@ -194,7 +194,7 @@
     .forth-button {
         top: 85%;
         width: 73%;
-        max-width: 250px;
+        max-width: 320px;
         height: 70px;
         font-size: 18px;
     }
@@ -236,6 +236,10 @@
     .option-description {
         font-size: 12px; /* Уменьшен размер текста описания */
         line-height: 14px;
+    }
+
+    .forth-white-text {
+        font-size: 20px;
     }
 }
 
@@ -286,12 +290,12 @@
         font-size: 20px;
         max-width: 320px;
         height: 70px;
-        top: 85%;
+        top: 80%;
     }
 
     .forth-white-text-container {
         height: 70px; /* Фиксированная высота */
-        width: 67%;
+        width: 55%;
         display: flex; /* Flexbox для центрирования содержимого */
         align-items: center; /* Выравнивание по вертикали */
         justify-content: end;
@@ -310,7 +314,7 @@
     .forth-white-text:first-child {
         display: inline; /* Выравнивает текст в одну линию */
         font-size: 25px;
-        padding: 5px 20px 0 40px;
+        padding: 5px 5px 0 40px;
     }
 
     .options-container {
@@ -321,6 +325,7 @@
         gap: 30px; /* Расстояние между элементами */
         width: 100%; /* Устанавливаем ширину контейнера */
         padding-top: 20px; /* Добавляем верхний отступ */
+        margin-top: 10px;
     }
 
     .option {
