@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const apiBaseUrl = "https://moneylex.online:8441"
-export const baseUrl = "https://moneylex.online:8441" //main
+export const apiBaseUrl = "https://moneylex.online:8443"
+export const baseUrl = "https://moneylex.online:8443" //main
 export const introVideoUrl = `${apiBaseUrl}/files/intro_video.mp4`
 export const circleVideoUrl = `${apiBaseUrl}/files/circle_video_0.mp4`
 
