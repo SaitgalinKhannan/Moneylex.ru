@@ -44,7 +44,7 @@
     padding: 10px 16px;
     gap: 10px;
     isolation: isolate;
-
+    filter: drop-shadow(5px 5px 20px rgba(212, 255, 0, 0.4));
     /* Размеры кнопки */
     width: 73%;
     height: 10%;

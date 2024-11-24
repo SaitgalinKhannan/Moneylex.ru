@@ -8,6 +8,7 @@ import EighthPage from "./components/EighthPage.tsx";
 import NinthPage from "./components/NinthPage.tsx";
 import TenthPage from "./components/TenthPage.tsx";
 import EleventhPage from "./components/EleventhPage.tsx";
+import SeventhPage from "./components/SeventhPage.tsx";
 
 function App() {
     /*const isMobile = useMediaQuery('(max-width: 768px)')*/
@@ -20,6 +21,7 @@ function App() {
             <ForthPage/>
             <FifthPage/>
             <SixthPage/>
+            <SeventhPage/>
             <EighthPage/>
             <NinthPage/>
             <TenthPage/>
@@ -28,4 +30,8 @@ function App() {
     )
 }
 
-export default App
+export default App;
+
+export function goToBot() {
+    window.open('https://t.me/MoneyLexBot', '_blank')
+}

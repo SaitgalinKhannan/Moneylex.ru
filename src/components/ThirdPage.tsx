@@ -5,6 +5,7 @@ import percent from "../assets/third_page/percent_down.png"
 import shield from "../assets/third_page/shield.png"
 import gears from "../assets/third_page/gears.png"
 import earth from "../assets/third_page/earth.png"
+import {goToBot} from "../App.tsx";
 
 function ThirdPage() {
     return (
@@ -43,7 +44,7 @@ function ThirdPage() {
             </div>
 
 
-            <button className={"third-button"}>ОСТАВИТЬ ЗАЯВКУ</button>
+            <button className={"third-button"} onClick={goToBot}>ОСТАВИТЬ ЗАЯВКУ</button>
         </div>
     )
 }

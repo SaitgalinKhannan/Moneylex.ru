@@ -1,0 +1,178 @@
+.seventh-screen-container {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    color: white; /* Белый текст */
+    font-family: Intro Book, sans-serif; /* Общий стиль текста */
+    position: relative;
+    overflow: hidden;
+}
+
+.seventh-white-text-container {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание (если требуется) */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);
+}
+
+.seventh-white-text {
+    font-family: Bowler, sans-serif;
+    font-size: 25px;
+    color: black;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.seventh-white-text:first-child {
+    padding-top: 5px;
+}
+
+/* styles.css */
+
+.vstack-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    border: 1px solid #D4FF00; /* Замените 'green' на нужный вам цвет */
+    border-radius: 20px;
+    padding: 10px;
+    gap: 10px;
+    margin: 30vh auto 0 auto;
+}
+
+.header-text {
+    font-family: 'Bowler', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: white; /* Замените на нужный вам цвет */
+    margin: 10px 0;
+}
+
+.section-title {
+    font-family: 'Bowler', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.loading-text {
+    font-family: 'Bowler', sans-serif;
+    font-size: 24px;
+    color: white;
+}
+
+.flag-icon {
+    width: 32px;
+}
+
+.hstack {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.course-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(67, 67, 67);
+    width: 100%;
+    max-height: 50px;
+}
+
+.course-name,
+.course-range {
+    font-family: 'Intro Book', sans-serif;
+    color: white;
+    max-height: 50px;
+}
+
+.course-name {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.course-range {
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+/* На маленьких экранах одна колонка */
+@media (max-width: 650px) {
+    .seventh-screen-container {
+        padding: 0 20px 20px 20px;
+    }
+
+    .seventh-white-text {
+        font-size: 20px;
+    }
+}
+
+/* На планшетах */
+@media (min-width: 651px) and (max-width: 1024px) {
+    .seventh-screen-container {
+        padding: 0 80px 20px 80px;
+    }
+
+    .vstack-container {
+        max-width: 700px;
+    }
+
+    .seventh-white-text-container {
+        height: 70px;
+        padding-right: 10%;
+        background: white;
+    }
+
+    .seventh-white-text:first-child {
+        font-size: 25px;
+        padding: 8px 20px 0 50px;
+    }
+
+    .seventh-white-text {
+        font-size: 25px;
+        padding: 5px 20px 0 0;
+    }
+}
+
+/* На ПК */
+@media (min-width: 1025px) {
+    .seventh-screen-container {
+        padding: 0 80px 20px 80px;
+    }
+
+    .vstack-container {
+        max-width: 700px;
+    }
+
+    .seventh-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        width: 55%;
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        justify-content: end;
+        white-space: nowrap; /* Запрещает перенос текста */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
+        background: white;
+        padding-right: 8%;
+    }
+
+    .seventh-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 20px 0 0;
+    }
+
+    .seventh-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 5px 0 40px;
+    }
+}

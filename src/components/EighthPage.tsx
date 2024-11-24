@@ -3,6 +3,7 @@ import icons from "../assets/icons.png";
 import {useMediaQuery} from "usehooks-ts";
 import {circleVideoUrl} from "../api.ts";
 import {useState} from "react";
+import {goToBot} from "../App.tsx";
 
 function EighthPage() {
     const isMobile = useMediaQuery("(max-width: 651px)")
@@ -22,6 +23,7 @@ function EighthPage() {
                     autoPlay
                     loop
                     muted
+                    playsInline
                     onLoadedData={() => setVideoLoaded(true)}
                 />
             </div>
@@ -29,7 +31,7 @@ function EighthPage() {
             {/*<img className={"circle-image"} src={image} alt={"image"}/>*/}
             {!isMobile && <img className={"eighth-icons"} src={icons} alt={"image"}/>}
 
-            <button className={"eighth-button"}>УЗНАТЬ КУРС</button>
+            <button className={"eighth-button"}  onClick={goToBot}>УЗНАТЬ КУРС</button>
         </div>
     )
 }

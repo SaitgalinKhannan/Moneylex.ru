@@ -19,7 +19,6 @@ function NinthPage() {
     }, []);
 
     useEffect(() => {
-        console.log(videoCount)
         const localDots = []
         for (let i = 0; i < videoCount; i++) {
             localDots.push(i)
@@ -36,12 +35,10 @@ function NinthPage() {
             dots[videoNumber].className += " active";
         } catch (e) {
             console.log(e)
-            console.log(dots[videoNumber])
         }
     }, [dots, videoNumber]);
 
     useEffect(() => {
-        console.log(videoNumber)
         setVideoLoaded(false);
         const dots = document.getElementsByClassName("dot");
         try {
@@ -82,8 +79,10 @@ function NinthPage() {
                 <video
                     className={`ninth-circle-video ${videoLoaded ? "" : "video-hidden"}`}
                     src={circleVideo(videoNumber)}
-                    autoPlay={true}
-                    loop={true}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     onLoadedData={() => setVideoLoaded(true)}
                 />
                 <img className={"right-arrow"} src={right} alt={"right"} onClick={handleRightClick}/>

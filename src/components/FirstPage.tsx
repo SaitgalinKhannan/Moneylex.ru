@@ -19,7 +19,7 @@ function FirstPage() {
             </div>
             <img className={"icons"} src={icons} alt="icons"/>
             <img className={"down"} src={down} alt="down"/>
-            <video className={"video"} src={introVideoUrl} controls muted autoPlay/>
+            <video className={"video"} src={introVideoUrl} controls muted autoPlay playsInline/>
         </div>
     )
 }

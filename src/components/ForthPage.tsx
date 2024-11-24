@@ -2,6 +2,7 @@ import "../styles/forth_page.css"
 import car from "../assets/forth_page/car.png"
 import atm from "../assets/forth_page/atm.png"
 import card from "../assets/forth_page/card.png"
+import {goToBot} from "../App.tsx";
 
 function ForthPage() {
 
@@ -42,7 +43,7 @@ function ForthPage() {
             </div>
 
 
-            <button className={"forth-button"}>ОСТАВИТЬ ЗАЯВКУ</button>
+            <button className={"forth-button"} onClick={goToBot}>ОСТАВИТЬ ЗАЯВКУ</button>
         </div>
     )
 }
