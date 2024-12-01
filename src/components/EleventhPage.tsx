@@ -16,10 +16,10 @@ function EleventhPage() {
                 <a href="https://api.whatsapp.com/send?phone=9932885888" target="_blank" rel="noopener noreferrer">
                     <img src={whats_app} alt="WhatsApp" className="social-icon"/>
                 </a>
-                <a href="https://t.me/LEXTOP88" target="_blank" rel="noopener noreferrer">
+                <a href="https://t.me/MoneyLexSupport" target="_blank" rel="noopener noreferrer">
                     <img src={telega} alt="Telegram" className="social-icon"/>
                 </a>
-                <a href="https://www.instagram.com/moneylexbot" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/moneylex_bot" target="_blank" rel="noopener noreferrer">
                     <img src={inst} alt="Instagram" className="social-icon"/>
                 </a>
             </div>

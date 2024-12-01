@@ -75,24 +75,23 @@ function NinthPage() {
             </div>
 
             <div className="ninth-video-container">
-                <img className={"left-arrow"} src={left} alt={"left"} onClick={handleLeftClick}/>
                 <video
                     className={`ninth-circle-video ${videoLoaded ? "" : "video-hidden"}`}
                     src={circleVideo(videoNumber)}
                     autoPlay
                     loop
-                    muted
                     playsInline
                     onLoadedData={() => setVideoLoaded(true)}
                 />
-                <img className={"right-arrow"} src={right} alt={"right"} onClick={handleRightClick}/>
             </div>
 
             {videoCount > 0 && (
                 <div className={"dots"}>
+                    <img className={"left-arrow"} src={left} alt={"left"} onClick={handleLeftClick}/>
                     {dots.map((value) =>
                         <span key={value} className="dot"></span>
                     )}
+                    <img className={"right-arrow"} src={right} alt={"right"} onClick={handleRightClick}/>
                 </div>
             )}
         </div>

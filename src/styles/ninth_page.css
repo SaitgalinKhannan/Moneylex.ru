@@ -112,19 +112,16 @@
 }
 
 .left-arrow, .right-arrow {
-    position: absolute;
     width: 20px;
     height: 32px;
     cursor: pointer;
 }
 
 .left-arrow {
-    padding-right: 150px;
     transform: translateX(-50%);
 }
 
 .right-arrow {
-    padding-left: 150px;
     transform: translateX(50%);
 }
 
@@ -140,6 +137,9 @@
     top: 80%;
     display: flex;
     justify-content: center;
+    max-width: 70%;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .dot {
@@ -147,6 +147,7 @@
     height: 15px;
     width: 15px;
     margin: 0 5px; /* Добавим немного пространства между точками */
+    align-self: center;
     background-color: white;
     border-radius: 50%;
     transition: background-color 0.6s ease;
@@ -191,8 +192,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        height: 200px;
-        width: 200px;
+        height: 280px;
+        width: 280px;
     }
 
     .ninth-video-and-arrows {
@@ -200,7 +201,7 @@
     }
 
     .left-arrow, .right-arrow {
-        margin: 10px 0;
+        margin: 10px 20px;
     }
 }
 
@@ -227,14 +228,8 @@
         padding: 0 20px 0 0;
     }
 
-    .left-arrow {
-        padding-right: 250px;
-        transform: translateX(-50%);
-    }
-
-    .right-arrow {
-        padding-left: 250px;
-        transform: translateX(50%);
+    .left-arrow, .right-arrow {
+        margin: 10px 20px;
     }
 
     .dots {
@@ -276,14 +271,8 @@
         padding: 0 20px 0 0;
     }
 
-    .left-arrow {
-        padding-right: 250px;
-        transform: translateX(-50%);
-    }
-
-    .right-arrow {
-        padding-left: 250px;
-        transform: translateX(50%);
+    .left-arrow, .right-arrow {
+        margin: 10px 20px;
     }
 
     .dots {
