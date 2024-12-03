@@ -4,10 +4,13 @@ import {useMediaQuery} from "usehooks-ts";
 import {circleVideoUrl} from "../api.ts";
 import {useState} from "react";
 import {goToBot} from "../App.tsx";
+import {VideoPlayer} from "./Video.tsx";
+import mute from "../assets/mute_button.png";
 
 function EighthPage() {
     const isMobile = useMediaQuery("(max-width: 651px)")
     const [videoLoaded, setVideoLoaded] = useState<boolean>(false);
+    const [isMuted, setIsMuted] = useState<boolean>(true);
 
     return (
         <div className="eighth-screen-container">
@@ -17,7 +20,8 @@ function EighthPage() {
             </div>
 
             <div className="video-container">
-                <video
+                {/*<video
+                    ref={videoRef}
                     className={`circle-video ${videoLoaded ? "" : "video-hidden"}`}
                     src={circleVideoUrl}
                     autoPlay
@@ -25,7 +29,16 @@ function EighthPage() {
                     muted
                     playsInline
                     onLoadedData={() => setVideoLoaded(true)}
+                />*/}
+                <VideoPlayer
+                    className={`circle-video ${videoLoaded ? "" : "video-hidden"}`}
+                    src={circleVideoUrl}
+                    onLoadedData={() => setVideoLoaded(true)}
+                    loop={true}
+                    muted={isMuted}
+                    onclick={() => setIsMuted(true)}
                 />
+                {isMuted && <img className={"sound_button"} src={mute} alt={"play"} onClick={() => setIsMuted(false)}/>}
             </div>
 
             {/*<img className={"circle-image"} src={image} alt={"image"}/>*/}

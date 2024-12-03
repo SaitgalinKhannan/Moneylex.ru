@@ -3,12 +3,15 @@ import {circleVideo, getVideoCount} from "../api.ts";
 import left from "../assets/ninth_page/left.png"
 import right from "../assets/ninth_page/right.png"
 import {useEffect, useState} from "react";
+import {VideoPlayer} from "./Video.tsx";
+import mute from "../assets/mute_button.png"
 
 function NinthPage() {
     const [videoCount, setVideoCount] = useState<number>(0);
     const [videoNumber, setVideoNumber] = useState<number>(0);
     const [dots, setDots] = useState<number[]>([])
     const [videoLoaded, setVideoLoaded] = useState<boolean>(false);
+    const [isMuted, setIsMuted] = useState<boolean>(true);
 
     useEffect(() => {
         getVideoCount()
@@ -75,14 +78,24 @@ function NinthPage() {
             </div>
 
             <div className="ninth-video-container">
-                <video
+                <VideoPlayer
+                    className={`ninth-circle-video ${videoLoaded ? "" : "video-hidden"}`}
+                    src={circleVideo(videoNumber)}
+                    onLoadedData={() => setVideoLoaded(true)}
+                    loop={true}
+                    muted={isMuted}
+                    onclick={() => setIsMuted(true)}
+                />
+                {isMuted && <img className={"sound_button"} src={mute} alt={"play"} onClick={() => setIsMuted(false)}/>}
+                {/*<video
+                    ref={videoRef}
                     className={`ninth-circle-video ${videoLoaded ? "" : "video-hidden"}`}
                     src={circleVideo(videoNumber)}
                     autoPlay
                     loop
                     playsInline
                     onLoadedData={() => setVideoLoaded(true)}
-                />
+                />*/}
             </div>
 
             {videoCount > 0 && (

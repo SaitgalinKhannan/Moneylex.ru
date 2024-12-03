@@ -50,6 +50,12 @@
     z-index: 1;
 }
 
+.sound_button {
+    z-index: 100;
+    width: 64px;
+    height: 64px;
+}
+
 .ninth-circle-video {
     position: absolute;
     top: 50%; /* Центрируем относительно контейнера */
@@ -57,7 +63,7 @@
     width: calc(100%); /* Видео занимает всю ширину контейнера */
     height: auto; /* Высота автоматически подстраивается */
     object-fit: cover;
-    z-index: 1;
+    z-index: 100;
     overflow: hidden;
     border-radius: 50%;
 }
