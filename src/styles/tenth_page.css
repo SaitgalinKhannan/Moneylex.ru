@@ -1,0 +1,250 @@
+/* Общие стили для всех устройств */
+.tenth-screen-container {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.tenth-white-text-container {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    min-width: 270px;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание (если требуется) */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25px 100%);
+}
+
+.tenth-white-text {
+    font-family: Bowler, sans-serif;
+    font-size: 25px;
+    color: black;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.faq-container {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column; /* Размещение элементов по вертикали */
+    gap: 20px; /* Расстояние между элементами */
+    width: 100%; /* Опционально: сделать ширину контейнера адаптивной */
+    height: auto;
+    padding: 20px; /* Отступы внутри контейнера */
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.faq-inner-container {
+    display: flex;
+    flex-direction: column; /* Размещение элементов по вертикали */
+    gap: 20px; /* Расстояние между элементами */
+    width: 100%; /* Опционально: сделать ширину контейнера адаптивной */
+    height: auto;
+    padding: 20px 0 20px 20px; /* Отступы внутри контейнера */
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.faq-outer-item {
+    border-bottom: 1px solid #d4ff00;
+    display: flex;
+    flex-direction: column; /* Убедиться, что содержимое идет сверху вниз */
+    position: relative;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d4ff00;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Убедиться, что содержимое идет сверху вниз */
+    position: relative;
+    overflow-x: hidden;
+}
+
+.faq-item:last-child {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #d4ff00;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Убедиться, что содержимое идет сверху вниз */
+    position: relative;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "BOWLER", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    color: #d4ff00;
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-question .icon {
+    width: 21px;
+    height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.faq-question .icon img {
+    width: 21px; /* Размер изображения */
+    height: 21px;
+}
+
+.faq-question .icon:hover {
+    transform: scale(1.1); /* Легкое увеличение иконки при наведении */
+}
+
+.faq-question .icon:focus {
+    outline: none; /* Убирает обводку при фокусе */
+}
+
+.faq-question .icon.rotate {
+    transform: rotate(45deg);
+}
+
+/*.faq-answer {
+    margin-top: 10px;
+    font-family: Intro Book, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+}*/
+.faq-answer {
+    height: 0; /* Начальная высота 0 */
+    overflow: hidden; /* Скрыть содержимое при высоте 0 */
+    transition: height 0.3s ease; /* Плавное изменение высоты */
+    margin-top: 10px; /* Отступ сверху */
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.faq-answer.active {
+    height: auto; /* Высота автоматически под содержимое */
+    overflow: visible; /* Сделать содержимое видимым */
+}
+
+/* Стили для смартфонов */
+@media (max-width: 650px) {
+    .tenth-white-text-container {
+        height: 50px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        background: white;
+    }
+
+    .tenth-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 20px;
+        padding: 5px 20px 0 50px;
+    }
+
+    .tenth-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 20px;
+        padding: 0 20px 0 0;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+    .tenth-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        white-space: nowrap; /* Запрещает перенос текста */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
+        background: white;
+        padding-right: 10%;
+    }
+
+    .tenth-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 20px 0 50px;
+    }
+
+    .tenth-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 0 20px 0 0;
+    }
+
+    .faq-container {
+        width: 70%;
+    }
+
+    .faq-question {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .faq-answer {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+/* Для компьютеров (ширина больше 1024px) */
+@media (min-width: 1025px) {
+    .tenth-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        white-space: nowrap; /* Запрещает перенос текста */
+        text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезается */
+        background: white;
+        padding-right: 10%;
+    }
+
+    .tenth-white-text-container {
+        height: 70px; /* Фиксированная высота */
+        min-width: 270px;
+        display: flex; /* Flexbox для центрирования содержимого */
+        align-items: center; /* Выравнивание по вертикали */
+        justify-content: end;
+        background: white;
+        padding-right: 8%;
+    }
+
+    .tenth-white-text:first-child {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 5px 20px 0 40px;
+    }
+
+    .tenth-white-text {
+        display: inline; /* Выравнивает текст в одну линию */
+        font-size: 25px;
+        padding: 0 20px 0 0;
+    }
+
+    .faq-container {
+        width: 70%;
+    }
+
+    .faq-question {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .faq-answer {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
