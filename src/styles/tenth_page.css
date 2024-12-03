@@ -10,7 +10,7 @@
 
 .tenth-white-text-container {
     position: absolute;
-    top: 10%;
+    top: 10vh;
     right: 0;
     min-width: 270px;
     justify-content: center; /* Горизонтальное выравнивание по центру */
@@ -32,32 +32,33 @@
 }
 
 .faq-container {
-    margin-top: 20vh;
+    margin-top: 10vh;
     display: flex;
-    flex-direction: column; /* Размещение элементов по вертикали */
-    gap: 20px; /* Расстояние между элементами */
-    width: 100%; /* Опционально: сделать ширину контейнера адаптивной */
-    height: auto;
-    padding: 20px; /* Отступы внутри контейнера */
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
     box-sizing: border-box;
-    overflow: auto;
+    transition: margin-top 0.7s ease;
+}
+
+.faq-container.open {
+    margin-top: 25vh;
 }
 
 .faq-inner-container {
     display: flex;
-    flex-direction: column; /* Размещение элементов по вертикали */
-    gap: 20px; /* Расстояние между элементами */
-    width: 100%; /* Опционально: сделать ширину контейнера адаптивной */
-    height: auto;
-    padding: 20px 0 20px 20px; /* Отступы внутри контейнера */
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 0 20px 20px;
     box-sizing: border-box;
-    overflow: auto;
 }
 
 .faq-outer-item {
     border-bottom: 1px solid #d4ff00;
     display: flex;
-    flex-direction: column; /* Убедиться, что содержимое идет сверху вниз */
+    flex-direction: column;
     position: relative;
 }
 
@@ -66,18 +67,12 @@
     border-bottom: 1px solid #d4ff00;
     padding-bottom: 10px;
     display: flex;
-    flex-direction: column; /* Убедиться, что содержимое идет сверху вниз */
+    flex-direction: column;
     position: relative;
-    overflow-x: hidden;
 }
 
 .faq-item:last-child {
     margin-bottom: 5px;
-    border-bottom: 1px solid #d4ff00;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: column; /* Убедиться, что содержимое идет сверху вниз */
-    position: relative;
 }
 
 .faq-question {
@@ -102,43 +97,32 @@
 }
 
 .faq-question .icon img {
-    width: 21px; /* Размер изображения */
+    width: 21px;
     height: 21px;
 }
 
 .faq-question .icon:hover {
-    transform: scale(1.1); /* Легкое увеличение иконки при наведении */
+    transform: scale(1.1);
 }
 
 .faq-question .icon:focus {
-    outline: none; /* Убирает обводку при фокусе */
+    outline: none;
 }
 
-.faq-question .icon.rotate {
-    transform: rotate(45deg);
-}
-
-/*.faq-answer {
-    margin-top: 10px;
-    font-family: Intro Book, sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-    color: #ffffff;
-}*/
 .faq-answer {
-    height: 0; /* Начальная высота 0 */
-    overflow: hidden; /* Скрыть содержимое при высоте 0 */
-    transition: height 0.3s ease; /* Плавное изменение высоты */
-    margin-top: 10px; /* Отступ сверху */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    margin-top: 10px;
     font-family: "Intro Book", sans-serif;
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
 }
 
-.faq-answer.active {
-    height: auto; /* Высота автоматически под содержимое */
-    overflow: visible; /* Сделать содержимое видимым */
+.faq-answer.open {
+    max-height: 1500px;
+    overflow: visible;
 }
 
 /* Стили для смартфонов */

@@ -1,5 +1,5 @@
 import "../styles/tenth_page.css"
-import {FC, useEffect, useRef, useState} from "react";
+import {FC, useState} from "react";
 import plus from "../assets/tenth_page/plus.png"
 import minus from "../assets/tenth_page/minus.png"
 
@@ -10,17 +10,8 @@ interface FAQItemProps {
 
 const FaqItem: FC<FAQItemProps> = ({question, answer}) => {
     const [isOpen, setIsOpen] = useState(false);
-    const answerRef = useRef<HTMLDivElement>(null);
 
     const toggleOpen = () => setIsOpen(!isOpen);
-
-    useEffect(() => {
-        if (answerRef.current) {
-            answerRef.current.style.height = isOpen
-                ? `${answerRef.current.scrollHeight}px`
-                : "0px";
-        }
-    }, [isOpen]);
 
     return (
         /*<div className="faq-item">
@@ -37,7 +28,7 @@ const FaqItem: FC<FAQItemProps> = ({question, answer}) => {
                     <img src={isOpen ? minus : plus} alt={isOpen ? "Minus" : "Plus"}/>
                 </div>
             </div>
-            <div ref={answerRef} className="faq-answer">
+            <div className={`faq-answer ${isOpen ? "open" : ""}`}>
                 {answer}
             </div>
         </div>
@@ -46,17 +37,16 @@ const FaqItem: FC<FAQItemProps> = ({question, answer}) => {
 
 function TenthPage() {
     const [isOpen, setIsOpen] = useState(false);
-    const answerRef = useRef<HTMLDivElement>(null);
 
     const toggleOpen = () => setIsOpen(!isOpen);
 
-    useEffect(() => {
+    /*useEffect(() => {
         if (answerRef.current) {
             answerRef.current.style.height = isOpen
                 ? `${answerRef.current.scrollHeight}px`
                 : "0px";
         }
-    }, [isOpen]);
+    }, [isOpen]);*/
 
     const faqData = [
         {
@@ -107,7 +97,7 @@ function TenthPage() {
                 <div className="tenth-white-text">FAQ</div>
             </div>
 
-            <div className="faq-container">
+            <div className={`faq-container ${isOpen ? "open" : ""}`}>
                 <div className="faq-outer-item">
                     <div className="faq-question" onClick={toggleOpen}>
                         <span>{"КАК ЭТО РАБОТАЕТ?"}</span>
@@ -115,9 +105,10 @@ function TenthPage() {
                             <img src={isOpen ? minus : plus} alt={isOpen ? "Minus" : "Plus"}/>
                         </div>
                     </div>
-                    <div ref={answerRef} className="faq-answer">
+                    <div className={`faq-answer ${isOpen ? "open" : ""}`}>
                         <span>Мы делаем обмен валют и переводы максимально простыми и удобными. Воспользуйтесь нашими услугами, следуя понятным шагам.</span>
-                        <span style={{fontWeight: 700}}><br/><br/>Выберите способ получения тайских батов в Таиланде:</span>
+                        <span
+                            style={{fontWeight: 700}}><br/><br/>Выберите способ получения тайских батов в Таиланде:</span>
 
                         <div className="faq-inner-container">
                             {faqData.map((item, index) => (
