@@ -3,6 +3,7 @@ import logo from "../assets/moneylex_logo.png";
 import icons from "../assets/icons.png";
 import down from "../assets/new_down.png";
 import {introVideoUrl} from "../api.ts";
+import {goToCalc} from "./GoToBot.ts";
 
 function FirstPage() {
     return (
@@ -18,7 +19,7 @@ function FirstPage() {
                 <div className="bar">УДОБНО</div>
             </div>
             <img className={"icons"} src={icons} alt="icons"/>
-            <img className={"down"} src={down} alt="down"/>
+            <img className={"down"} src={down} alt="down" onClick={goToCalc}/>
             <video className={"video"} src={introVideoUrl} controls muted autoPlay playsInline/>
         </div>
     )

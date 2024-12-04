@@ -11,11 +11,9 @@ import EleventhPage from "./components/EleventhPage.tsx";
 import SeventhPage from "./components/SeventhPage.tsx";
 
 function App() {
-    /*const isMobile = useMediaQuery('(max-width: 768px)')*/
-
     return (
         <>
-            <FirstPage/>
+            <FirstPage />
             <SecondPage/>
             <ThirdPage/>
             <ForthPage/>
@@ -31,7 +29,3 @@ function App() {
 }
 
 export default App;
-
-export function goToBot() {
-    window.open('https://t.me/MoneyLexBot', '_blank')
-}

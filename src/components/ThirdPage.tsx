@@ -5,7 +5,7 @@ import percent from "../assets/third_page/percent_down.png"
 import shield from "../assets/third_page/shield.png"
 import gears from "../assets/third_page/gears.png"
 import earth from "../assets/third_page/earth.png"
-import {goToBot} from "../App.tsx";
+import goToBot from "./GoToBot.ts";
 
 function ThirdPage() {
     return (

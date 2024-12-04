@@ -3,9 +3,9 @@ import icons from "../assets/icons.png";
 import {useMediaQuery} from "usehooks-ts";
 import {circleVideoUrl} from "../api.ts";
 import {useState} from "react";
-import {goToBot} from "../App.tsx";
 import {VideoPlayer} from "./Video.tsx";
 import mute from "../assets/mute_button.png";
+import goToBot from "./GoToBot.ts";
 
 function EighthPage() {
     const isMobile = useMediaQuery("(max-width: 651px)")

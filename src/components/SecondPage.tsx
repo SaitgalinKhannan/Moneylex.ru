@@ -1,6 +1,6 @@
 import "../styles/second_page.css"
 import icons from "../assets/second_page/icons.png"
-import {goToBot} from "../App.tsx";
+import goToBot from "./GoToBot.ts";
 
 function SecondPage() {
     return (

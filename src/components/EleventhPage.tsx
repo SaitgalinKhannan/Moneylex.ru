@@ -2,7 +2,7 @@ import "../styles/eleventh_page.css"
 import whats_app from "../assets/eleventh_page/whats_app.png"
 import telega from "../assets/eleventh_page/telega.png"
 import inst from "../assets/eleventh_page/inst.png"
-import {goToBot} from "../App.tsx";
+import goToBot from "./GoToBot.ts";
 
 function EleventhPage() {
 

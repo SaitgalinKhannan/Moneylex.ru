@@ -2,7 +2,7 @@ import "../styles/forth_page.css"
 import car from "../assets/forth_page/car.png"
 import atm from "../assets/forth_page/atm.png"
 import card from "../assets/forth_page/card.png"
-import {goToBot} from "../App.tsx";
+import goToBot from "./GoToBot.ts";
 
 function ForthPage() {
 

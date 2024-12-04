@@ -12,14 +12,14 @@ interface VideoProps {
 export const VideoPlayer: FC<VideoProps> = ({src, className, loop, onLoadedData, muted, onclick}) => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
 
-    /*useEffect(() => {
+    useEffect(() => {
         const videoElement = videoRef.current;
-        if (videoElement && play) {
+        if (videoElement) {
             videoElement.play()
                 .then(r => console.log(r))
                 .catch(e => console.log(e));
         }
-    }, [play]);*/
+    }, [src]);
 
     useEffect(() => {
         const videoElement = videoRef.current;
