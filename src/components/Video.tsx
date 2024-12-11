@@ -6,10 +6,11 @@ interface VideoProps {
     onLoadedData: () => void;
     loop: boolean;
     muted: boolean;
+    controls: boolean;
     onclick: () => void;
 }
 
-export const VideoPlayer: FC<VideoProps> = ({src, className, loop, onLoadedData, muted, onclick}) => {
+export const VideoPlayer: FC<VideoProps> = ({src, className, loop, onLoadedData, muted, controls, onclick}) => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
 
     useEffect(() => {
@@ -59,6 +60,7 @@ export const VideoPlayer: FC<VideoProps> = ({src, className, loop, onLoadedData,
         playsInline
         muted={muted}
         loop={loop}
+        controls={controls}
         onLoadedData={onLoadedData}
         onClick={onclick}
     />;

@@ -84,6 +84,7 @@ function NinthPage() {
                     onLoadedData={() => setVideoLoaded(true)}
                     loop={true}
                     muted={isMuted}
+                    controls={false}
                     onclick={() => setIsMuted(true)}
                 />
                 {isMuted && <img className={"sound_button"} src={mute} alt={"play"} onClick={() => setIsMuted(false)}/>}

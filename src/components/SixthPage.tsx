@@ -12,7 +12,7 @@ function SixthPage() {
                 </p>
                 <p>
                     <span className="flag">🇹🇭</span>
-                    <span className="country">Таиланд</span> - Пхукет | Паттайя | Бангкок
+                    <span className="country">Таиланд</span> - Пхукет | Паттайя | <span>Бангкок</span>
                 </p>
                 <p>
                     <span className="flag">🇦🇪</span>
@@ -20,11 +20,11 @@ function SixthPage() {
                 </p>
                 <p>
                     <span className="flag">🇹🇷</span>
-                    <span className="country">Турция</span> - Стамбул | Аланья | Анталия | Мерсин
+                    <span className="country">Турция</span> - <span>Стамбул</span> | <span>Аланья</span> | <span>Анталия</span> | <span>Мерсин</span>
                 </p>
                 <p>
                     <span className="flag">🇺🇸</span>
-                    <span className="country">США</span> - Нью-Йорк | Лос-Анджелес | Майами
+                    <span className="country">США</span> - <span>Нью-Йорк</span> | <span>Лос-Анджелес</span> | <span>Майами</span>
                 </p>
                 <p>
                     <span className="flag">🇨🇾</span>
@@ -52,7 +52,7 @@ function SixthPage() {
                 <h3>КУРЬЕРСКАЯ ДОСТАВКА:</h3>
                 <p>
                     <span className="flag">🇹🇭</span>
-                    <span className="country">Таиланд</span> - Пхукет | Паттайя | Бангкок | Самуи | Панган
+                    <span className="country">Таиланд</span> - <span>Пхукет</span> | <span>Паттайя</span> | <span>Бангкок</span> | <span>Самуи</span> | <span>Панган</span>
                 </p>
                 <p>
                     <span className="flag">🇦🇹</span>
@@ -80,7 +80,7 @@ function SixthPage() {
                 </p>
                 <p>
                     <span className="flag">🇩🇪</span>
-                    <span className="country">Германия</span> - Берлин | Франкфурт | Мюнхен | Гамбург
+                    <span className="country">Германия</span> - <span>Берлин</span> | <span>Франкфурт</span> | <span>Мюнхен</span> | <span>Гамбург</span>
                 </p>
                 <p>
                     <span className="flag">🇳🇱</span>
@@ -104,7 +104,7 @@ function SixthPage() {
                 </p>
                 <p>
                     <span className="flag">🇪🇸</span>
-                    <span className="country">Испания</span> - Барселона | Мадрид | Валенсия
+                    <span className="country">Испания</span> - <span>Барселона</span> | <span>Мадрид</span> | <span>Валенсия</span>
                 </p>
                 <p>
                     <span className="flag">🇮🇹</span>
@@ -128,7 +128,7 @@ function SixthPage() {
                 </p>
                 <p>
                     <span className="flag">🇵🇱</span>
-                    <span className="country">Польша</span> - (Прибалтика) Рига | Таллин | Вильнюс
+                    <span className="country">Польша</span> - <span>(Прибалтика) Рига</span> | <span>Таллин</span> | <span>Вильнюс</span>
                 </p>
                 <p>
                     <span className="flag">🇵🇹</span>
