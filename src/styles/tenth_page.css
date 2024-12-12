@@ -62,6 +62,12 @@
     position: relative;
 }
 
+.open-faq-outer-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
 .faq-item {
     margin-bottom: 20px;
     border-bottom: 1px solid #d4ff00;

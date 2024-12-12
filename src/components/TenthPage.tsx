@@ -152,7 +152,7 @@ function TenthPage() {
             ),
         },
         {
-            question: "🌍 Международные операции",
+            question: "Международные операции",
             answerComponent: (
                 <div>
                     <p>Мы также осуществляем обмен валют в ключевых странах, представленных в списке на нашем сайте.</p>
@@ -172,7 +172,7 @@ function TenthPage() {
             </div>
 
             <div className={`faq-container ${isOpen ? "open" : ""}`}>
-                <div className="faq-outer-item">
+                <div className={`${isOpen ? "open-faq-outer-item" : "faq-outer-item"}`}>
                     <div className="faq-question" onClick={toggleOpen}>
                         <span>{"КАК ЭТО РАБОТАЕТ?"}</span>
                         <div className="icon">
