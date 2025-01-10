@@ -10,12 +10,18 @@ interface CourseProps {
     courseName: string;
     from: number;
     to: number;
+    flag: boolean;
 }
 
-const CourseBox: FC<CourseProps> = ({courseName, from, to}) => {
+const CourseBox: FC<CourseProps> = ({courseName, from, to, flag}) => {
     return (
         <div className="course-box">
             <p className="course-name">{courseName}</p>
+            {flag ? (
+                <p className="course-range">От {from} до {to}</p>
+            ): (
+                <p className="course-range">От {from}</p>
+            )}
             <p className="course-range">От {from} до {to}</p>
         </div>
     );
@@ -60,31 +66,31 @@ function SeventhPage() {
                             <img className="flag-icon" src={thaiFlag} alt="Thai Flag"/>
                             <p className="section-title">Покупка THB</p>
                         </div>
-                        <CourseBox courseName="RUB/THB" from={course.rubToThbFrom} to={course.rubToThbTo}/>
-                        <CourseBox courseName="USDT/THB" from={course.usdtToThbFrom} to={course.usdtToThbTo}/>
+                        <CourseBox courseName="RUB/THB" from={course.rubToThbFrom} to={course.rubToThbTo} flag={course.flag}/>
+                        <CourseBox courseName="USDT/THB" from={course.usdtToThbFrom} to={course.usdtToThbTo} flag={course.flag}/>
 
                         <div className="hstack">
                             <img className="flag-icon" src={russianFlag} alt="Russian Flag"/>
                             <p className="section-title">Покупка RUB</p>
                         </div>
-                        <CourseBox courseName="USDT/RUB" from={course.usdtToRubFrom} to={course.usdtToRubTo}/>
-                        <CourseBox courseName="THB/RUB" from={course.thbToRubFrom} to={course.thbToRubTo}/>
-                        <CourseBox courseName="USD/RUB" from={course.usdToRubFrom} to={course.usdToRubTo}/>
+                        <CourseBox courseName="USDT/RUB" from={course.usdtToRubFrom} to={course.usdtToRubTo} flag={course.flag}/>
+                        <CourseBox courseName="THB/RUB" from={course.thbToRubFrom} to={course.thbToRubTo} flag={course.flag}/>
+                        <CourseBox courseName="USD/RUB" from={course.usdToRubFrom} to={course.usdToRubTo} flag={course.flag}/>
 
                         <div className="hstack">
                             <img className="flag-icon" src={earthFlag} alt="Earth Icon"/>
                             <p className="section-title">Покупка USDT</p>
                         </div>
-                        <CourseBox courseName="RUB/USDT" from={course.rubToUsdtFrom} to={course.rubToUsdtTo}/>
-                        <CourseBox courseName="THB/USDT" from={course.thbToUsdtFrom} to={course.thbToUsdtTo}/>
-                        <CourseBox courseName="USD/USDT" from={course.usdToUsdtFrom} to={course.usdToUsdtTo}/>
+                        <CourseBox courseName="RUB/USDT" from={course.rubToUsdtFrom} to={course.rubToUsdtTo} flag={course.flag}/>
+                        <CourseBox courseName="THB/USDT" from={course.thbToUsdtFrom} to={course.thbToUsdtTo} flag={course.flag}/>
+                        <CourseBox courseName="USD/USDT" from={course.usdToUsdtFrom} to={course.usdToUsdtTo} flag={course.flag}/>
 
                         <div className="hstack">
                             <img className="flag-icon" src={usaFlag} alt="USA Flag"/>
                             <p className="section-title">Покупка USD</p>
                         </div>
-                        <CourseBox courseName="RUB/USD" from={course.rubToUsdFrom} to={course.rubToUsdTo}/>
-                        <CourseBox courseName="USDT/USD" from={course.usdtToUsdFrom} to={course.usdtToUsdTo}/>
+                        <CourseBox courseName="RUB/USD" from={course.rubToUsdFrom} to={course.rubToUsdTo} flag={course.flag}/>
+                        <CourseBox courseName="USDT/USD" from={course.usdtToUsdFrom} to={course.usdtToUsdTo} flag={course.flag}/>
                     </>
                 ) : (
                     <p className="loading-text">ЗАГРУЗКА...</p>

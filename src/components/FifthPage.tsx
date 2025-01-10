@@ -1,6 +1,5 @@
 import "../styles/fifth_page.css"
 import earth from "../assets/fifth_page/earth.png"
-import down from "../assets/fifth_page/down.png"
 
 function FifthPage() {
     return (
@@ -45,12 +44,10 @@ function FifthPage() {
                     </div>
                     <div className="stat-description">успешной работы без задержек</div>
                 </div>
-                {/*<div className="stat-link">ГЕОГРАФИЯ ОФИСОВ</div>*/}
-                <div className="stat-link">
+                {/*<div className="stat-link">
                     <span>ГЕОГРАФИЯ ОФИСОВ</span>
                     <img src={down} alt="icon" className="stat-link-icon"/>
-                </div>
-
+                </div>*/}
             </div>
         </div>
     )
