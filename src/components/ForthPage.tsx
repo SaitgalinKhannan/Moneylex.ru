@@ -34,7 +34,7 @@ function ForthPage() {
                     <img src={card} alt="Иконка перевода" className="option-third-icon"/>
                     <div className="option-content">
                         <h3 className="option-title">Перевод на счёт в банке</h3>
-                        <p className="option-description">
+                        <p className="option-description-1">
                             Любая оплата для физ лиц<br/>
                             Оплата инвойсов за покупку и аренду недвижимости
                         </p>

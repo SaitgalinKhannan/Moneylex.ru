@@ -12,15 +12,15 @@ function FifthPage() {
             <div className="fifth-stats-container">
                 <div className="stat-group">
                     <div className="stat-number">
-                        <span className="number">19 </span>
+                        <span className="number">18 </span>
                         <span className="text">офисов</span>
                     </div>
-                    <div className="stat-description">по всей России</div>
+                    <div className="stat-description">по России</div>
                 </div>
                 <div className="stat-group">
                     <div className="stat-number">
-                        <span className="number">18 </span>
-                        <span className="text">офисов</span>
+                        <span className="number">21 </span>
+                        <span className="text">офис</span>
                     </div>
                     <div className="stat-description">по миру</div>
                 </div>

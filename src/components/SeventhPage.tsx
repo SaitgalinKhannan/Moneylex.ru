@@ -22,7 +22,6 @@ const CourseBox: FC<CourseProps> = ({courseName, from, to, flag}) => {
             ): (
                 <p className="course-range">От {from}</p>
             )}
-            <p className="course-range">От {from} до {to}</p>
         </div>
     );
 };

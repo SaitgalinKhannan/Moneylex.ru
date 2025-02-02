@@ -62,7 +62,7 @@ function TenthPage() {
                     <br/>
                     <p>
                         1. Оставьте заявку в боте
-                        <a className={"link-text"} href="https://t.me/MoneyLexBot" target="_blank"> @MoneyLexBot.</a>
+                        <a className={"link-text"} href="https://t.me/MoneyLexBot?start=website" target="_blank"> @MoneyLexBot.</a>
                     </p>
                     <p>2. Дождитесь ответа от оператора.</p>
                     <p>3. Отправьте местоположение в чат и договоритесь о времени встречи с курьером.</p>
@@ -75,7 +75,7 @@ function TenthPage() {
                     <p>8. Получите деньги.</p>
                     <br/>
                     <p className={"bold-text"}>
-                        ❗️Точная корректировка курса происходит на момент сделки по боту <a className={"link-text"} href="https://t.me/MoneyLexBot" target="_blank">@MoneyLexBot</a> в разделе «калькулятор сделки».
+                        ❗️Точная корректировка курса происходит на момент сделки по боту <a className={"link-text"} href="https://t.me/MoneyLexBot?start=website" target="_blank">@MoneyLexBot</a> в разделе «калькулятор сделки».
                     </p>
                 </div>
             ),
@@ -93,7 +93,7 @@ function TenthPage() {
                     <br/>
                     <p>
                         1. Оставьте заявку в боте
-                        <a className={"link-text"} href="https://t.me/MoneyLexBot" target="_blank"> @MoneyLexBot.</a>
+                        <a className={"link-text"} href="https://t.me/MoneyLexBot?start=website" target="_blank"> @MoneyLexBot.</a>
                     </p>
                     <p>2. Дождитесь ответа от оператора.</p>
                     <p>3. Вам будут представлены на выбор доступные банкоматы для получения денежных средств и
@@ -132,7 +132,7 @@ function TenthPage() {
                     <br/>
                     <p>
                         1. Оставьте заявку в боте
-                        <a className={"link-text"} href="https://t.me/MoneyLexBot" target="_blank"> @MoneyLexBot.</a>
+                        <a className={"link-text"} href="https://t.me/MoneyLexBot?start=website" target="_blank"> @MoneyLexBot.</a>
                     </p>
                     <p>2. Дождитесь ответа от оператора.</p>
                     <p>3. Предоставьте номер банковского аккаунта и укажите название банка.</p>

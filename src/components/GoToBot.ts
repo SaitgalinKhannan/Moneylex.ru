@@ -1,5 +1,5 @@
 export default function goToBot() {
-    window.open("https://t.me/MoneyLexBot", "_blank")
+    window.open("https://t.me/MoneyLexBot?start=website", "_blank")
 }
 
 export function goToCalc() {

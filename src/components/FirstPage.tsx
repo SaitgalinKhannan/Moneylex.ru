@@ -3,7 +3,7 @@ import logo from "../assets/moneylex_logo.png";
 import icons from "../assets/icons.png";
 import down from "../assets/new_down.png";
 import {introVideoUrl} from "../api.ts";
-import {goToCalc} from "./GoToBot.ts";
+import goToBot, {goToCalc} from "./GoToBot.ts";
 import {useState} from "react";
 import {VideoPlayer} from "./Video.tsx";
 import mute from "../assets/mute_button.png";
@@ -43,17 +43,8 @@ function FirstPage() {
                     onclick={() => setIsMuted(true)}
                 />
                 {isMuted && isLoaded && <img className={"first-sound_button"} src={mute} alt={"play"} onClick={() => setIsMuted(false)}/>}
-                {/*<video
-                    className={"video"}
-                    src={introVideoUrl}
-                    controls={false}
-                    muted={isMuted}
-                    autoPlay
-                    playsInline
-                    preload="auto"
-                    onLoadedData={() => setIsLoaded(true)}
-                />*/}
             </div>
+            <button className={"first-button"} onClick={goToBot}>КАЛЬКУЛЯТОР СДЕЛКИ</button>
         </div>
     )
 }

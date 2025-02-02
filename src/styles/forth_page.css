@@ -189,6 +189,13 @@
     color: #ffffff;
 }
 
+.option-description-1 {
+    font-family: Bowler, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffff;
+}
+
 /* Стили для смартфонов */
 @media (max-width: 650px) {
     .forth-button {
@@ -238,6 +245,11 @@
         line-height: 14px;
     }
 
+    .option-description-1 {
+        font-size: 12px; /* Уменьшен размер текста описания */
+        line-height: 20px;
+    }
+
     .forth-white-text {
         font-size: 20px;
     }
@@ -279,7 +291,11 @@
     }
 
     .option-description {
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    .option-description-1 {
+        font-size: 16px;
     }
 }
 
@@ -339,7 +355,11 @@
     }
 
     .option-description {
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    .option-description-1 {
+        font-size: 14px;
     }
 
     /*.forth-page-tilted-text-container {

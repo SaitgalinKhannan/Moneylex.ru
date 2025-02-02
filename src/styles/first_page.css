@@ -156,6 +156,10 @@
     width: 51px;
     height: auto;
     animation: jump 1s ease-in-out infinite;
+
+    @media (max-width: 650px) {
+        display: none;
+    }
 }
 
 .white-bars {
@@ -195,8 +199,69 @@
     width: 34vw; /* Уменьшенная ширина для третьей полоски */
 }
 
+.first-button {
+    box-sizing: border-box;
+    position: absolute;
+    top: 88%;
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 10px;
+    isolation: isolate;
+    filter: drop-shadow(5px 5px 20px rgba(212, 255, 0, 0.4));
+    /* Размеры кнопки */
+    width: 73%;
+    height: 10%;
+
+    /* Фон и границы */
+    background: linear-gradient(90deg, #B4D608 0%, #CEF506 100%);
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    /* Вспомогательные свойства для родительского контейнера */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    /* Стили текста внутри кнопки */
+    font-family: Bowler, sans-serif; /* Подберите шрифт */
+    font-size: 16px; /* Настройте размер текста */
+    line-height: 20px; /* Настройте высоту строки */
+    text-align: center;
+    color: #000000; /* Цвет текста */
+    cursor: pointer; /* Указатель мыши */
+    transition: all 0.3s ease; /* Для плавности анимации */
+
+    /* Скрыть на десктопах */
+    @media (min-width: 651px) {
+        display: none;
+    }
+}
+
+/* Hover эффект */
+.first-button:hover {
+    background: linear-gradient(90deg, #CEF506 0%, #B4D608 100%);
+    transform: scale(1.05); /* Увеличение на 5% при наведении */
+}
+
+/* Active эффект */
+.first-button:active {
+    transform: scale(0.95); /* Уменьшение на 5% при клике */
+    background: linear-gradient(90deg, #A5C607 0%, #B9E506 100%);
+}
+
 /* Стили для смартфонов */
 @media (max-width: 650px) {
+    .first-button {
+        width: 73%;
+        max-width: 320px;
+        height: 70px;
+        font-size: 18px;
+    }
+
     .logo {
         top: 20px;
         width: auto;
