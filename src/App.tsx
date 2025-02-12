@@ -13,7 +13,7 @@ import SeventhPage from "./components/SeventhPage.tsx";
 function App() {
     return (
         <>
-            <FirstPage />
+            <FirstPage/>
             <SecondPage/>
             <ThirdPage/>
             <ForthPage/>

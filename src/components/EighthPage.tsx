@@ -12,7 +12,7 @@ function EighthPage() {
     const [isMuted, setIsMuted] = useState<boolean>(true);
 
     return (
-        <div className="eighth-screen-container">
+        <div id="eighth-page" className="eighth-screen-container">
             <div className={"eighth-white-text-container"}>
                 {/*<div className="eighth-white-text">ОПЕРАТИВНАЯ ПОДДЕРЖКА</div>
                 <div className="eighth-white-text">ДЛЯ ПОМОЩИ КЛИЕНТАМ</div>*/}

@@ -72,7 +72,7 @@ function NinthPage() {
     }
 
     return (
-        <div className="ninth-screen-container">
+        <div id="ninth-page" className="ninth-screen-container">
             <div className={"ninth-white-text-container"}>
                 <div className="ninth-white-text">ОТЗЫВЫ</div>
             </div>

@@ -9,7 +9,7 @@ import goToBot from "./GoToBot.ts";
 
 function ThirdPage() {
     return (
-        <div className="screen-container">
+        <div id="third-page" className="screen-container">
             <div className={"white-text-container"}>
                 <div className="white-text">ОПЛАТА</div>
                 <div className="white-text">КРИПТОВАЛЮТОЙ</div>

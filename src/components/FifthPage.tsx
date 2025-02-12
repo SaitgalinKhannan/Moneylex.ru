@@ -3,7 +3,7 @@ import earth from "../assets/fifth_page/earth.png"
 
 function FifthPage() {
     return (
-        <div className="fifth-screen-container">
+        <div id="fifth-page" className="fifth-screen-container">
             <div className={"fifth-white-text-container"}>
                 <div className="fifth-white-text">КРУПНАЯ ПАРТНЁРСКАЯ</div>
                 <div className="fifth-white-text">ИНФРАСТРУКТУРА</div>

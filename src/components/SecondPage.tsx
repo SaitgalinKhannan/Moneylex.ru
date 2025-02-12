@@ -4,7 +4,7 @@ import goToBot from "./GoToBot.ts";
 
 function SecondPage() {
     return (
-        <div className="screen-container">
+        <div id="second-page" className="screen-container">
             <div className={"second-white-text-container"}>
                 <div className="second-white-text">С ЛЮБОГО БАНКА</div>
             </div>

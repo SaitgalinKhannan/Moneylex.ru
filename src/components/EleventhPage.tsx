@@ -7,7 +7,7 @@ import goToBot from "./GoToBot.ts";
 function EleventhPage() {
 
     return (
-        <div className="eleventh-screen-container">
+        <div id="eleventh-page" className="eleventh-screen-container">
             <div className={"eleventh-white-text-container"}>
                 <div className="eleventh-white-text">КОНТАКТЫ</div>
             </div>

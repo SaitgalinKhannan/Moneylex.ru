@@ -50,7 +50,7 @@ function SeventhPage() {
     }
 
     return (
-        <div className="seventh-screen-container">
+        <div id="seventh-page" className="seventh-screen-container">
             <div className={"seventh-white-text-container"}>
                 <div className="seventh-white-text">ЧЕСТНЫЕ КУРСЫ</div>
                 <div className="seventh-white-text">ОБМЕНА</div>

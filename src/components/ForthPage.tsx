@@ -7,7 +7,7 @@ import goToBot from "./GoToBot.ts";
 function ForthPage() {
 
     return (
-        <div className="screen-container">
+        <div id="fourth-page" className="screen-container">
             <div className={"forth-white-text-container"}>
                 <div className="forth-white-text">УДОБНЫЙ СПОСОБ</div>
                 <div className="forth-white-text">ПОЛУЧЕНИЯ</div>

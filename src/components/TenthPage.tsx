@@ -166,7 +166,7 @@ function TenthPage() {
 
 
     return (
-        <div className="tenth-screen-container">
+        <div id="tenth-page" className="tenth-screen-container">
             <div className={"tenth-white-text-container"}>
                 <div className="tenth-white-text">FAQ</div>
             </div>

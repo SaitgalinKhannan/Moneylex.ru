@@ -3,12 +3,12 @@ import earth from "../assets/fifth_page/earth.png";
 
 function SixthPage() {
     return (
-        <div className="sixth-screen-container">
+        <div id="sixth-page" className="sixth-screen-container">
             <div className="sixth-screen-column">
                 <h3>ОФИСЫ:</h3>
                 <p>
                     <span className="flag">🇷🇺</span>
-                    <span className="country">Россия</span> - 19 городов
+                    <span className="country">Россия</span> - 18 городов
                 </p>
                 <p>
                     <span className="flag">🇹🇭</span>
