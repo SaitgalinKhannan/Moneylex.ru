@@ -5,6 +5,7 @@ import right from "../assets/ninth_page/right.png"
 import {useEffect, useState} from "react";
 import {VideoPlayer} from "./Video.tsx";
 import mute from "../assets/mute_button.png"
+import {goToReviews} from "./GoToBot.ts";
 
 function NinthPage() {
     const [videoCount, setVideoCount] = useState<number>(0);
@@ -88,15 +89,6 @@ function NinthPage() {
                     onclick={() => setIsMuted(true)}
                 />
                 {isMuted && <img className={"sound_button"} src={mute} alt={"play"} onClick={() => setIsMuted(false)}/>}
-                {/*<video
-                    ref={videoRef}
-                    className={`ninth-circle-video ${videoLoaded ? "" : "video-hidden"}`}
-                    src={circleVideo(videoNumber)}
-                    autoPlay
-                    loop
-                    playsInline
-                    onLoadedData={() => setVideoLoaded(true)}
-                />*/}
             </div>
 
             {videoCount > 0 && (
@@ -108,6 +100,8 @@ function NinthPage() {
                     <img className={"right-arrow"} src={right} alt={"right"} onClick={handleRightClick}/>
                 </div>
             )}
+
+            <button className={"ninth-button"} onClick={goToReviews}>ВСЕ ОТЗЫВЫ</button>
         </div>
     )
 }

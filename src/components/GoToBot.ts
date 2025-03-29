@@ -5,3 +5,7 @@ export default function goToBot() {
 export function goToCalc() {
     window.open("https://t.me/MoneyLexBot/moneylex_calc", "_blank")
 }
+
+export function goToReviews() {
+    window.open("https://t.me/thailanduslugi/105", "_blank")
+}

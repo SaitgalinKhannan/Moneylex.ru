@@ -4,7 +4,7 @@ import zipfile
 
 server_ip = "185.218.125.35"
 server_username = "root"
-server_password = "moneylexbot"
+server_password = "cub15ardorgrass"
 
 # 1. Создание ZIP-архива
 with zipfile.ZipFile('dist.zip', 'w') as zip_file:
