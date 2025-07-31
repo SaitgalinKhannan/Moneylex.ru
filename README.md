@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# MoneyLex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Официальный сайт сервиса обмена валют MoneyLex с доставкой до двери.
 
-Currently, two official plugins are available:
+## О проекте
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+MoneyLex — это надежный сервис обмена валют, специализирующийся на операциях с рублями, тайскими батами, долларами США и криптовалютой USDT. Сервис предоставляет удобные способы получения валюты в Таиланде и других странах.
 
-## Expanding the ESLint configuration
+## Основные возможности
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Обмен валют** — RUB, THB, USD, USDT
+- **Доставка курьером** — Пхукет, Паттайя, Бангкок, Самуи, Панган
+- **Выдача через банкомат** — по всему Таиланду без карты
+- **Переводы на тайские счета** — для физических и юридических лиц
+- **Криптовалютные операции** — быстро и с низкими комиссиями
+- **Международные операции** — в 28 странах мира
 
-- Configure the top-level `parserOptions` property like this:
+## Особенности
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Адаптивный дизайн для мобильных устройств
+- Интеграция с Telegram ботом для заявок
+- Реальные курсы валют через API
+- Видео презентации и отзывы клиентов
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Контакты
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Telegram бот**: @MoneyLexBot
+- **Поддержка**: @MoneyLexSupport
+- **WhatsApp**: +9932885888
+- **Instagram**: @moneylex_bot
