@@ -2,7 +2,7 @@ import "../styles/first_page.css"
 import logo from "../assets/moneylex_logo.png";
 import icons from "../assets/icons.png";
 import down from "../assets/new_down.png";
-import {introVideoUrl} from "../api.ts";
+import {ExchangeRates, introVideoUrl} from "../api.ts";
 import {goToCalc} from "./GoToBot.ts";
 import {useState, useRef, useEffect} from "react";
 import {VideoPlayer} from "./Video.tsx";
@@ -11,7 +11,12 @@ import whats_app from "../assets/eleventh_page/whats_app.png";
 import telega from "../assets/eleventh_page/telega.png";
 import inst from "../assets/eleventh_page/inst.png";
 
-function FirstPage() {
+
+interface FirstPageProps {
+    course: ExchangeRates | null;
+}
+
+function FirstPage({course}: FirstPageProps) {
     const [isLoaded, setIsLoaded] = useState<boolean>(false)
     const [isMuted, setIsMuted] = useState<boolean>(true)
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // Новое состояние
@@ -83,7 +88,7 @@ function FirstPage() {
                 <p onClick={() => scrollToSection("third-page")}>Оплата криптовалютой</p>
                 <p onClick={() => scrollToSection("fourth-page")}>Удобный способ получения</p>
                 <p onClick={() => scrollToSection("fifth-page")}>Крупная партнёрская инфраструктура</p>
-                <p onClick={() => scrollToSection("seventh-page")}>Честные курсы обмена</p>
+                {course?.isHidden !== true && <p onClick={() => scrollToSection("seventh-page")}>Честные курсы обмена</p>}
                 <p onClick={() => scrollToSection("eighth-page")}>Оперативная поддержка</p>
                 <p onClick={() => scrollToSection("ninth-page")}>Отзывы</p>
                 <p onClick={() => scrollToSection("tenth-page")}>FAQ</p>
